@@ -1,0 +1,104 @@
+/* header */
+#header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.header__inner {
+    display: flex;
+    margin: 57px 68px 0 68px;
+    justify-content: space-between;
+
+
+}
+
+.header__logo {
+    display: flex;
+    height: 35px;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-family: var(--mainfont-monuR);
+        line-height: 1;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}
+
+.header__nav.scrolling {
+    opacity: 0;
+    /* 사라진 상태 */
+    transition: opacity 0s ease-in-out;
+}
+
+.header__nav {
+    opacity: 1;
+    /* 나타난 상태 */
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+
+
+
+    a {
+        width: 50%;
+        display: inline-block;
+        font-family: var(--mainfont-gmarket);
+        font-size: 0.9rem;
+        color: #fff;
+
+    }
+
+    a.active {
+        color: #6DF6FF;
+        position: relative;
+
+        &::before {
+            content: "->";
+            position: absolute;
+            left: -20px;
+        }
+    }
+}
+
+.header__navmob {
+    .btn {
+        width: 145px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #1C1C20;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .text {
+            font-size: 0.9rem;
+            font-family: var(--mainfont-gmarket);
+            margin-right: 17px;
+            margin-top: 2px;
+        }
+
+        span {
+            position: absolute;
+            left: 20px;
+            top: 11px;
+            width: 50px;
+            height: 2px;
+            background-color: #B1B1B2;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                width: 50px;
+                height: 2px;
+                background-color: #868688;
+            }
+        }
+    }
+}
