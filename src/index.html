@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEE MYEONGHUN PORTFOLIO</title>
-    <link rel="stylesheet" href="assets/css/style.scss"/>
+    <link rel="stylesheet" href="assets/scss/style.scss"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
     <script defer src="./assets/js/canvas.js"></script>
+    <script defer src="./assets/js/menu.js"></script>
 </head>
 <body>
-    <!-- <canvas class="p-canvas-webgl" id="canvas-webgl"></canvas> -->
+    <canvas class="p-canvas-webgl" id="canvas-webgl"></canvas>
     <header id="header">
         <div class="header__inner">
             <div class="header__logo">
@@ -19,14 +20,14 @@
                     PORTFOLIO
                 </h1>
             </div>
-            <div class="header__nav" ref="headerNav">
+            <div class="header__nav">
                 <a to="/home" class="active">Home</a>
                 <a to="/intro">About Me</a>
                 <a to="/">Project</a>
                 <a to="/">Contact</a>
                 <a to="/">Site</a>
             </div>
-            <div class="header__navmob" ref="headerNavMob">
+            <div class="header__navmob">
                 <div class='btn'>
                     <span></span>
                     <div class="text">Menu</div>
@@ -37,11 +38,17 @@
     
     <section id="intro">
         <div class="intro__text">
-            <h2>
-                I Am Front-End<br />
-                Developer
-            </h2>
-            <p>I hope you enjoy</p>
+            <div class="main__text t1">I Am Front-End</div><br />
+            <div class="main__text t2">Developer</div>
+            <div class="intro__bottom">
+                <div class="bar"></div>
+                <div class="text">
+                    <p>I hope you enjoy
+                        <img src="assets/img/scrolldown.svg" alt="scrolldown">
+                    </p>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -50,13 +57,84 @@
             <div class='horizon'>
                 <div class="container">
                     <div class='left'>
-                        <div class='top'>{hor.top}</div>
-                        <div class='middle'></div>
-                        <div class='middle2'>{hor.middle2}</div>
-                        <div class='bottom'>{hor.bottom}</div>
-                        <div class="btn">
-                            <a to="/" class='view'>view</a>
-                            <a to="/" class='code'>code</a>
+                        <div class="top__wrap">
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'>PHP / TEAMPROJECT / JAVASCRIPT / DEVELOPMENT</div>
+                        </div>
+                        
+                        <div class='big__title'>
+                            PHP<br />
+                            TEAM PROJECT
+                        </div>
+                        <div class='sub__title h1'>Teamwork has been a positive experience for me</div>
+                        <div class='desc'>분리의신은 일상 생활 속에서 발생하는 잘못된 분리배출을 알려주고, 간편한 검색을 통해 올바른 배출 방법을 안내하는 웹사이트입니다. 처음 접해본 PHP를 통해 여러 시행착오를 격으면서 많은 경험을 하였고, 사용자의 피드백을 통해 더 나은 서비스를 제공하는 방향으로 개선하고 싶습니다. 프로젝트를 통해 팀원과의 협업의 중요성을 배우는 계기가 되었습니다.</div>
+                        <div class="btn h1">
+                            <a to="/">
+                                <div class="text">view</div>
+                                <div class="arrow"></div>
+                            </a>
+                            <a to="/">
+                                <div class="text">code</div>
+                                <div class="arrow"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class='right'>
+                        <img src="assets/img/recyclemockup.png" alt="테스트 이미지" />
+                    </div>
+                </div>
+            </div>
+            <div class='horizon'>
+                <div class="container">
+                    <div class='left'>
+                        <div class="top__wrap">
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'>REACT / BLOG / NODEJS /JAVASCRIPT / BACKEND</div>
+                        </div>
+                        
+                        <div class='big__title'>
+                            REACT<br />
+                            BLOG SITE
+                        </div>
+                        <div class='sub__title h2'>Challenges make me grow</div>
+                        <div class='desc'>리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를 도입하여 스타일을 보다 효과적으로 다루었고, 더 많은 기능을 쉽게 추가할 수 있는 구조를 갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나 기여할 수 있는 환경을 조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해 블로그를 확장하는 데 최적화되어 있습니다.</div>
+                        <div class="btn h2">
+                            <a to="/">
+                                <div class="text">view</div>
+                                <div class="arrow"></div>
+                            </a>
+                            <a to="/">
+                                <div class="text">code</div>
+                                <div class="arrow"></div>
+                            </a>
                         </div>
                     </div>
                     <div class='right'>
@@ -67,64 +145,128 @@
             <div class='horizon'>
                 <div class="container">
                     <div class='left'>
-                        <div class='top'>{hor.top}</div>
-                        <div class='middle'></div>
-                        <div class='middle2'>{hor.middle2}</div>
-                        <div class='bottom'>{hor.bottom}</div>
-                        <div class="btn">
-                            <a to="/" class='view'>view</a>
-                            <a to="/" class='code'>code</a>
+                        <div class="top__wrap">
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'>PHP / TEAMPROJECT / JAVASCRIPT / DEVELOPMENT</div>
+                        </div>
+                        
+                        <div class='big__title'>
+                            REACT<br />
+                            YOUTUBE SITE
+                        </div>
+                        <div class='sub__title h3'>Experience is more valuable than anything else</div>
+                        <div class='desc'>유튜브 API를 이용하여 제가 좋아하는 다큐사이트를 만들었습니다.당신을 다큐멘터리 세계로 초대합니다.평소 다큐멘터리에 대한 끊임없는 탐구와 흥미로운 여정을 공유합니다.이곳에서는 다양한 주제와 편견 없는 시각으로 선보이는 다큐멘터리들이 당신을 기다리고 있습니다.</div>
+                        <div class="btn h3">
+                            <a to="/">
+                                <div class="text">view</div>
+                                <div class="arrow"></div>
+                            </a>
+                            <a to="/">
+                                <div class="text">code</div>
+                                <div class="arrow"></div>
+                            </a>
                         </div>
                     </div>
                     <div class='right'>
-                        <img src="assets/img/testimg.png" alt="테스트 이미지" />
+                        <img src="assets/img/reactyoutube.png" alt="테스트 이미지" />
                     </div>
                 </div>
             </div>
             <div class='horizon'>
                 <div class="container">
                     <div class='left'>
-                        <div class='top'>{hor.top}</div>
-                        <div class='middle'></div>
-                        <div class='middle2'>{hor.middle2}</div>
-                        <div class='bottom'>{hor.bottom}</div>
-                        <div class="btn">
-                            <a to="/" class='view'>view</a>
-                            <a to="/" class='code'>code</a>
+                        <div class="top__wrap">
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'>VUE / USEAPI / JAVASCRIPT / DEVELOPMENT</div>
+                        </div>
+                        
+                        <div class='big__title'>
+                            VUE<br />
+                            MOVIE SITE
+                        </div>
+                        <div class='sub__title h4'>Do not be afraid of failure</div>
+                        <div class='desc'>MOVIEKING CINEMA는 사용자와의 소통이 이루어지는 공간이기도 합니다. 피드백을 받으면서 서비스를 개선하는 과정에서, 사용자들과 함께 성장하고 더 나은 경험을 제공하는 방향으로 나아가고 있습니다. 사용자들과의 소통은 단순히 서비스를 제공하는 것 이상으로, 더 큰 가치를 창출하고 있습니다.</div>
+                        <div class="btn h4">
+                            <a to="/">
+                                <div class="text">view</div>
+                                <div class="arrow"></div>
+                            </a>
+                            <a to="/">
+                                <div class="text">code</div>
+                                <div class="arrow"></div>
+                            </a>
                         </div>
                     </div>
                     <div class='right'>
-                        <img src="assets/img/testimg.png" alt="테스트 이미지" />
+                        <img src="assets/img/vuemovie.png" alt="테스트 이미지" />
                     </div>
                 </div>
             </div>
             <div class='horizon'>
                 <div class="container">
                     <div class='left'>
-                        <div class='top'>{hor.top}</div>
-                        <div class='middle'></div>
-                        <div class='middle2'>{hor.middle2}</div>
-                        <div class='bottom'>{hor.bottom}</div>
-                        <div class="btn">
-                            <a to="/" class='view'>view</a>
-                            <a to="/" class='code'>code</a>
+                        <div class="top__wrap">
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'>PHP / TEAMPROJECT / JAVASCRIPT / DEVELOPMENT</div>
                         </div>
-                    </div>
-                    <div class='right'>
-                        <img src="assets/img/testimg.png" alt="테스트 이미지" />
-                    </div>
-                </div>
-            </div>
-            <div class='horizon'>
-                <div class="container">
-                    <div class='left'>
-                        <div class='top'>{hor.top}</div>
-                        <div class='middle'></div>
-                        <div class='middle2'>{hor.middle2}</div>
-                        <div class='bottom'>{hor.bottom}</div>
-                        <div class="btn">
-                            <a to="/" class='view'>view</a>
-                            <a to="/" class='code'>code</a>
+                        
+                        <div class='big__title'>
+                            REACT<br />
+                            PORTFOLIO SITE
+                        </div>
+                        <div class='sub__title h5'>Do not be afraid of failure</div>
+                        <div class='desc'>REACT를 이용하여 포트폴리오 사이트를 제작하였습니다. 다양한 GSAP효과와 가로 세로 스크롤을 이용한 페이지 이동 스크롤 스무스 효과 등을 이용하여 자연스러운 효과를 연출해 보았습니다. REACT를 이용하여 포트폴리오 사이트를 제작하였습니다. 다양한 GSAP효과와 가로 세로 스크롤을 이용한 페이지 이동 스크롤 스무스 효과 등을 이용하여 자연스러운 효과를 연출해 보았습니다.</div>
+                        <div class="btn h5">
+                            <a to="/">
+                                <div class="text">view</div>
+                                <div class="arrow"></div>
+                            </a>
+                            <a to="/">
+                                <div class="text">code</div>
+                                <div class="arrow"></div>
+                            </a>
                         </div>
                     </div>
                     <div class='right'>
@@ -135,6 +277,281 @@
         </div>
     </section>
 
+    <section id="section3">
+        <div class="slide__text">
+            2023 M.HUN PORTFOLIO
+        </div>
+    </section>
+
+    <section id="section4">
+        <div class="section4__wrap">
+            <div class="backgroudimg">
+                <!-- <img src="assets/img/horizonyimg.png" alt=""> -->
+            </div>
+            <div class="text__wrap">
+                <div class="text">FRONTEND</div>
+                <div class="text">WEBSITES</div>
+                <div class="text">WEBSTANDARD</div>
+                <div class="text">CREATIVE</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section5">
+        <div class="section__wrap">
+            <div class="content__wrap">
+                <div class="left">
+                    <div class="scroll__down">
+                        <div class="text">SCROLL DOWN</div>
+                        <div class="svg"></div>
+                    </div>
+                    <div class="text">Want to see my site?</div>
+                </div>
+                <div class="right">
+                    <img src="assets/img/section5.png" alt="section5img">
+                </div>
+            </div>
+            <div class="site__inner container">
+                <div class="grid">
+                    <div class="card">
+                      <span class="icon">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <h4>Products</h4>
+                      <p>
+                        Standard chunk of Lorem Ipsum used since the 1500s is showed below
+                        for those interested.
+                      </p>
+                      <div class="shine"></div>
+                      <div class="background">
+                        <div class="tiles">
+                          <div class="tile tile-1"></div>
+                          <div class="tile tile-2"></div>
+                          <div class="tile tile-3"></div>
+                          <div class="tile tile-4"></div>
+                  
+                          <div class="tile tile-5"></div>
+                          <div class="tile tile-6"></div>
+                          <div class="tile tile-7"></div>
+                          <div class="tile tile-8"></div>
+                  
+                          <div class="tile tile-9"></div>
+                          <div class="tile tile-10"></div>
+                        </div>
+                  
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span class="icon">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <h4>Products</h4>
+                      <p>
+                        Standard chunk of Lorem Ipsum used since the 1500s is showed below
+                        for those interested.
+                      </p>
+                      <div class="shine"></div>
+                      <div class="background">
+                        <div class="tiles">
+                          <div class="tile tile-1"></div>
+                          <div class="tile tile-2"></div>
+                          <div class="tile tile-3"></div>
+                          <div class="tile tile-4"></div>
+                  
+                          <div class="tile tile-5"></div>
+                          <div class="tile tile-6"></div>
+                          <div class="tile tile-7"></div>
+                          <div class="tile tile-8"></div>
+                  
+                          <div class="tile tile-9"></div>
+                          <div class="tile tile-10"></div>
+                        </div>
+                  
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span class="icon">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <h4>Products</h4>
+                      <p>
+                        Standard chunk of Lorem Ipsum used since the 1500s is showed below
+                        for those interested.
+                      </p>
+                      <div class="shine"></div>
+                      <div class="background">
+                        <div class="tiles">
+                          <div class="tile tile-1"></div>
+                          <div class="tile tile-2"></div>
+                          <div class="tile tile-3"></div>
+                          <div class="tile tile-4"></div>
+                  
+                          <div class="tile tile-5"></div>
+                          <div class="tile tile-6"></div>
+                          <div class="tile tile-7"></div>
+                          <div class="tile tile-8"></div>
+                  
+                          <div class="tile tile-9"></div>
+                          <div class="tile tile-10"></div>
+                        </div>
+                  
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span class="icon">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <h4>Products</h4>
+                      <p>
+                        Standard chunk of Lorem Ipsum used since the 1500s is showed below
+                        for those interested.
+                      </p>
+                      <div class="shine"></div>
+                      <div class="background">
+                        <div class="tiles">
+                          <div class="tile tile-1"></div>
+                          <div class="tile tile-2"></div>
+                          <div class="tile tile-3"></div>
+                          <div class="tile tile-4"></div>
+                  
+                          <div class="tile tile-5"></div>
+                          <div class="tile tile-6"></div>
+                          <div class="tile tile-7"></div>
+                          <div class="tile tile-8"></div>
+                  
+                          <div class="tile tile-9"></div>
+                          <div class="tile tile-10"></div>
+                        </div>
+                  
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span class="icon">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"
+                          />
+                        </svg>
+                      </span>
+                      <h4>Products</h4>
+                      <p>
+                        Standard chunk of Lorem Ipsum used since the 1500s is showed below
+                        for those interested.
+                      </p>
+                      <div class="shine"></div>
+                      <div class="background">
+                        <div class="tiles">
+                          <div class="tile tile-1"></div>
+                          <div class="tile tile-2"></div>
+                          <div class="tile tile-3"></div>
+                          <div class="tile tile-4"></div>
+                  
+                          <div class="tile tile-5"></div>
+                          <div class="tile tile-6"></div>
+                          <div class="tile tile-7"></div>
+                          <div class="tile tile-8"></div>
+                  
+                          <div class="tile tile-9"></div>
+                          <div class="tile tile-10"></div>
+                        </div>
+                  
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                      </div>
+                    </div>
+                </div>
+            <div>
+        </div>
+    </section>
+
     <script type="module" src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.2/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.2/dist/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.to(".section4__wrap", {
+            yPercent: -100,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#section4",
+                start: "top top",
+                end: () => `+=${document.querySelector("#section4").offsetHeight}`,
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+            }
+        });
+    </script>
 </body>
 </html>

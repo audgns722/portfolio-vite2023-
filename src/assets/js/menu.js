@@ -1,30 +1,21 @@
-export default {
-    data() {
-        return {
-            scrollPosition: 0,
-        };
-    },
-    mounted() {
-        // 스크롤 이벤트 추가
-        window.addEventListener("scroll", this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            this.scrollPosition = window.scrollY;
+document.addEventListener('DOMContentLoaded', function() {
+    var headerNav = document.querySelector('.header__nav');
+    var headerNavMob = document.querySelector('.header__navmob');
 
-            // 스크롤 위치에 따라 가시성 조절
-            if (this.scrollPosition > 0) {
-                // 스크롤이 발생하면 데스크톱 네비게이션 숨김, 모바일 네비게이션 표시
-                this.$refs.headerNav.style.display = "none";
-                this.$refs.headerNavMob.style.display = "block";
-            } else {
-                // 맨 위로 스크롤하면 데스크톱 네비게이션 표시, 모바일 네비게이션 숨김
-                this.$refs.headerNav.style.display = "block";
-                this.$refs.headerNavMob.style.display = "none";
-            }
-        },
-        toggleMobileNav() {
-            // 모바일 네비게이션 토글 로직을 추가하세요
-        },
-    },
-};
+    // 초기 상태에서 header__navmob에 hide 클래스 추가
+    headerNavMob.classList.add('hide');
+
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > 0) {
+            // 스크롤이 발생하면 header__nav가 숨겨지고 header__navmob가 나타남
+            headerNav.classList.add('hide');
+            headerNavMob.classList.remove('hide');
+        } else {
+            // 맨 위로 스크롤하면 header__nav가 나타나고 header__navmob가 숨겨짐
+            headerNav.classList.remove('hide');
+            headerNavMob.classList.add('hide');
+        }
+    });
+});
