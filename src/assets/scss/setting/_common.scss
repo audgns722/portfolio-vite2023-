@@ -1,83 +1,81 @@
 body {
-    background-color: #020207;
-    color: #fff;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  background-color: #020207;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
 body {
-    --background-color: #18181B;
-    --text-color: #A1A1AA;
-  
-    --card-background-color: rgba(255, 255, 255, .015);
-    --card-border-color: rgba(255, 255, 255, 0.1);
-    --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+
+  --card-background-color: rgba(255, 255, 255, .015);
+  --card-border-color: #503167;
+  --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+  --card-box-shadow-1-y: 3px;
+  --card-box-shadow-1-blur: 6px;
+  --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+  --card-box-shadow-2-y: 8px;
+  --card-box-shadow-2-blur: 15px;
+  --card-label-color: #FFFFFF;
+  --card-icon-color: #D4D4D8;
+  --card-icon-background-color: rgba(255, 255, 255, 0.08);
+  --card-icon-border-color: rgba(255, 255, 255, 0.12);
+  --card-shine-opacity: .1;
+  --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgb(168 16 185 / 0%) 0deg, #a346e9 25deg, rgb(179 52 211 / 18%) 295deg, rgb(82 16 185 / 0%) 360deg);
+  --card-line-color: #2A2B2C;
+  --card-tile-color: rgba(16, 185, 129, 0.05);
+
+  --card-hover-border-color: rgba(255, 255, 255, 0.2);
+  --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+  --card-hover-box-shadow-1-y: 5px;
+  --card-hover-box-shadow-1-blur: 10px;
+  --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+  --card-hover-box-shadow-2-y: 15px;
+  --card-hover-box-shadow-2-blur: 25px;
+  --card-hover-icon-color: #34D399;
+  --card-hover-icon-background-color: rgba(52, 211, 153, 0.1);
+  --card-hover-icon-border-color: rgba(52, 211, 153, 0.2);
+
+  --blur-opacity: .01;
+
+  &.light {
+    --card-background-color: transparent;
+    --card-border-color: rgba(24, 24, 27, 0.08);
+    --card-box-shadow-1: rgba(24, 24, 27, 0.02);
     --card-box-shadow-1-y: 3px;
     --card-box-shadow-1-blur: 6px;
-    --card-box-shadow-2: rgba(0, 0, 0, 0.1);
-    --card-box-shadow-2-y: 8px;
-    --card-box-shadow-2-blur: 15px;
-    --card-label-color: #FFFFFF;
-    --card-icon-color: #D4D4D8;
-    --card-icon-background-color: rgba(255, 255, 255, 0.08);
-    --card-icon-border-color: rgba(255, 255, 255, 0.12);
-    --card-shine-opacity: .1;
-    --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, rgba(52, 211, 153, 0.18) 295deg, rgba(16, 185, 129, 0) 360deg);
-    --card-line-color: #2A2B2C;
-    --card-tile-color: rgba(16, 185, 129, 0.05);
-  
-    --card-hover-border-color: rgba(255, 255, 255, 0.2);
-    --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
-    --card-hover-box-shadow-1-y: 5px;
-    --card-hover-box-shadow-1-blur: 10px;
-    --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
-    --card-hover-box-shadow-2-y: 15px;
-    --card-hover-box-shadow-2-blur: 25px;
-    --card-hover-icon-color: #34D399;
-    --card-hover-icon-background-color: rgba(52, 211, 153, 0.1);
-    --card-hover-icon-border-color: rgba(52, 211, 153, 0.2);
-  
-    --blur-opacity: .01;
-  
-    &.light {  
-      --card-background-color: transparent;
-      --card-border-color: rgba(24, 24, 27, 0.08);
-      --card-box-shadow-1: rgba(24, 24, 27, 0.02);
-      --card-box-shadow-1-y: 3px;
-      --card-box-shadow-1-blur: 6px;
-      --card-box-shadow-2: rgba(24, 24, 27, 0.04);
-      --card-box-shadow-2-y: 2px;
-      --card-box-shadow-2-blur: 7px;
-      --card-label-color: #18181B;
-      --card-icon-color: #18181B;
-      --card-icon-background-color: rgba(24, 24, 27, 0.04);
-      --card-icon-border-color: rgba(24, 24, 27, 0.1);
-      --card-shine-opacity: .3;
-      --card-shine-gradient: conic-gradient(from 225deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, #EDFAF6 285deg, #FFFFFF 345deg, rgba(16, 185, 129, 0) 360deg);
-      --card-line-color: #E9E9E7;
-      --card-tile-color: rgba(16, 185, 129, 0.08);
-  
-      --card-hover-border-color: rgba(24, 24, 27, 0.15);
-      --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
-      --card-hover-box-shadow-1-y: 3px;
-      --card-hover-box-shadow-1-blur: 6px;
-      --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
-      --card-hover-box-shadow-2-y: 8px;
-      --card-hover-box-shadow-2-blur: 15px;
-      --card-hover-icon-color: #18181B;
-      --card-hover-icon-background-color: rgba(24, 24, 27, 0.04);
-      --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
-  
-      --blur-opacity: .1;
-    }
-  
-    &.toggle .grid * {
-      transition-duration: 0s !important;
-    }
+    --card-box-shadow-2: rgba(24, 24, 27, 0.04);
+    --card-box-shadow-2-y: 2px;
+    --card-box-shadow-2-blur: 7px;
+    --card-label-color: #18181B;
+    --card-icon-color: #18181B;
+    --card-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-icon-border-color: rgba(24, 24, 27, 0.1);
+    --card-shine-opacity: .3;
+    --card-shine-gradient: conic-gradient(from 225deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, #EDFAF6 285deg, #FFFFFF 345deg, rgba(16, 185, 129, 0) 360deg);
+    --card-line-color: #E9E9E7;
+    --card-tile-color: rgba(16, 185, 129, 0.08);
+
+    --card-hover-border-color: rgba(24, 24, 27, 0.15);
+    --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
+    --card-hover-box-shadow-1-y: 3px;
+    --card-hover-box-shadow-1-blur: 6px;
+    --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
+    --card-hover-box-shadow-2-y: 8px;
+    --card-hover-box-shadow-2-blur: 15px;
+    --card-hover-icon-color: #18181B;
+    --card-hover-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
+
+    --blur-opacity: .1;
   }
 
-.container {
-    max-width: 1480px;
-    margin: 0 auto;
+  &.toggle .grid * {
+    transition-duration: 0s !important;
+  }
 }
 
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+}

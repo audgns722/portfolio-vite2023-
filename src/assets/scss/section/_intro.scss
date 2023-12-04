@@ -22,24 +22,29 @@ canvas {
     .main__text {
         font-size: 6vw;
         line-height: 1.1;
-        
+
     }
+
     .intro__bottom {
         display: flex;
         align-items: center;
         margin-top: 20vh;
+
         .bar {
             height: 1px;
             background-color: rgb(254, 252, 248);
             width: 50px;
         }
-        .text{
+
+        .text {
             margin-left: 1vw;
+
             p {
                 line-height: 1;
                 font-size: 1.6rem;
                 position: relative;
-                img{
+
+                img {
                     position: absolute;
                     width: 10vw;
                     height: 10vw;
@@ -48,7 +53,7 @@ canvas {
                     right: -5.2vw;
                     top: -2.6vw;
                 }
-        
+
             }
         }
     }

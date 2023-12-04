@@ -2,6 +2,7 @@
     --mainfont-gmarket: "gmarket";
     --mainfont-monuR: "Monument Extended";
     --subfont-vcr: "vcr osd mono";
+    --subfont-ald: 'Aldrich', sans-serif;
 
     @font-face {
         font-family: 'Monument Extended';
@@ -11,7 +12,7 @@
         font-style: normal;
         font-display: swap;
     }
-    
+
     --black: #000;
     --black100: #1d1d1d;
     --black200: #4d4d4d;
@@ -27,11 +28,13 @@
     --white500: #a7a7a7;
 
     // 폰트 셋팅
-    font-family: var(--mainfont-gmaket), var(--mainfont-monuR), var(--subfont-vcr);
+    font-family: var(--mainfont-gmaket),
+    var(--mainfont-monuR),
+    var(--subfont-vcr);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-  
+
 
     // 폰트 최적화
     font-synthesis: none;

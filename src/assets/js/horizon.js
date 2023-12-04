@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 export function horizon() {
     gsap.registerPlugin(ScrollTrigger);
     const horSection = gsap.utils.toArray(".horizon");
-    const horSection2 = gsap.utils.toArray(".section__wrap");
+    const horSection2 = gsap.utils.toArray(".sections");
 
     gsap.to(horSection, {
         xPercent: -100 * (horSection.length - 1),
