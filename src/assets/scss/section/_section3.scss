@@ -4,6 +4,7 @@
     height: 25vw;
     display: flex;
     align-items: center;
+    position: relative;
 
         .slide__text {
             white-space: nowrap;
@@ -12,18 +13,18 @@
             color: #020207;
             font-family: var(--mainfont-monuR);
             text-shadow: -1px 0 #333D5A, 0 1px #333D5A, 1px 0 #333D5A, 0 -1px #333D5A;
-            position: relative;
-
-            &::before {
-                content: 'I’m live in the details';
-                color: var(--white);
-                text-shadow: none;
-                position: absolute;
-                left: 0;
-                top: 35%;
-                font-size: 4vw;
-                margin-left: 9.3vw;
-            }
+            
+        }
+        .slide__text2 {
+            font-family: var(--mainfont-monuR);
+            color: var(--white);
+            text-shadow: none;
+            position: absolute;
+            left: 0;
+            top: 35%;
+            font-size: 4vw;
+            margin-left: 9.3vw;
+            opacity: 0;
         }
     }
 
