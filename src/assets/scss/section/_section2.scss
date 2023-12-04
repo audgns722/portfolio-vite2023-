@@ -1,5 +1,21 @@
-#horizon {
+#section2 {
     height: 100vh;
+}
+
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5.2vw;
+    height: 5.2vw;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    mix-blend-mode: difference;
+    will-change: transform;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .horizon__wrap {
@@ -30,22 +46,28 @@
                 .h1 {
                     color: #95DA75;
                 }
+
                 .h2 {
                     color: #F9A600;
                 }
+
                 .h3 {
                     color: #1657DA;
                 }
+
                 .h4 {
                     color: #624B74;
                 }
+
                 .h5 {
                     color: #F04C41;
                 }
+
                 .top__wrap {
                     display: flex;
                     position: relative;
                     align-items: flex-end;
+
                     .top__text {
                         font-family: var(--subfont-vcr);
                         color: #423F63;
@@ -58,41 +80,82 @@
                         height: 12px;
                         margin-right: 10px;
                     }
+
                     #bars {
                         width: 40px;
                         margin-right: 10px;
                     }
-                    
+
                     .bar {
                         background: #423F63;
                         bottom: 1px;
                         height: 3px;
                         position: absolute;
-                        width: 3px;      
+                        width: 3px;
                         animation: sound 0ms -800ms linear infinite alternate;
                     }
-                    
+
                     @keyframes sound {
                         0% {
                             opacity: .35;
-                            height: 3px; 
+                            height: 3px;
                         }
+
                         100% {
-                            opacity: 1;       
-                            height: 14px;        
+                            opacity: 1;
+                            height: 14px;
                         }
                     }
-                    
-                    .bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
-                    .bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
-                    .bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
-                    .bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
-                    .bar:nth-child(5)  { left: 17px; animation-duration: 400ms; }
-                    .bar:nth-child(6)  { left: 21px; animation-duration: 427ms; }
-                    .bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
-                    .bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
-                    .bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
-                    .bar:nth-child(10) { left: 37px; animation-duration: 442ms; }
+
+                    .bar:nth-child(1) {
+                        left: 1px;
+                        animation-duration: 474ms;
+                    }
+
+                    .bar:nth-child(2) {
+                        left: 5px;
+                        animation-duration: 433ms;
+                    }
+
+                    .bar:nth-child(3) {
+                        left: 9px;
+                        animation-duration: 407ms;
+                    }
+
+                    .bar:nth-child(4) {
+                        left: 13px;
+                        animation-duration: 458ms;
+                    }
+
+                    .bar:nth-child(5) {
+                        left: 17px;
+                        animation-duration: 400ms;
+                    }
+
+                    .bar:nth-child(6) {
+                        left: 21px;
+                        animation-duration: 427ms;
+                    }
+
+                    .bar:nth-child(7) {
+                        left: 25px;
+                        animation-duration: 441ms;
+                    }
+
+                    .bar:nth-child(8) {
+                        left: 29px;
+                        animation-duration: 419ms;
+                    }
+
+                    .bar:nth-child(9) {
+                        left: 33px;
+                        animation-duration: 487ms;
+                    }
+
+                    .bar:nth-child(10) {
+                        left: 37px;
+                        animation-duration: 442ms;
+                    }
                 }
             }
 
@@ -125,6 +188,7 @@
                 cursor: pointer;
                 gap: 0.8vw;
                 color: #95DA75;
+                pointer-events: auto;
 
                 a {
                     display: flex;
@@ -136,8 +200,9 @@
                     min-height: 35px;
                     font-size: 1.1rem;
                     font-family: var(--mainfont-monuR);
-                                        border-radius: 50px;
+                    border-radius: 50px;
                     background-color: #222222;
+
                     .arrow {
                         margin-left: 5px;
                         background-image: url(../../img/arrow01.svg);
@@ -152,13 +217,13 @@
 
         .right {
             width: 40%;
+
             img {
                 height: 100%;
                 max-height: 700px;
             }
-            
+
         }
     }
 
 }
-

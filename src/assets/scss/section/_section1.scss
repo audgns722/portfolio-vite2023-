@@ -1,5 +1,5 @@
 /* intro */
-#intro {
+#section1 {
     height: 100vh;
     position: relative;
     padding-top: 12vh;
@@ -52,6 +52,13 @@ canvas {
                     min-height: 100px;
                     right: -5.2vw;
                     top: -2.6vw;
+                    transition: transform 0.3s;
+                    /* 속성명을 rotate에서 transform으로 변경 */
+
+                    /* 마우스 호버시 회전 */
+                    &:hover {
+                        transform: rotate(220deg) scale(0.9);
+                    }
                 }
 
             }

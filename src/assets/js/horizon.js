@@ -10,7 +10,7 @@ export function horizon() {
         xPercent: -100 * (horSection.length - 1),
         ease: "none",
         scrollTrigger: {
-            trigger: "#horizon",
+            trigger: "#section2",
             start: "top top",
             end: "+=9600",
             pin: true,
