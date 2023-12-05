@@ -48,107 +48,6 @@ export function section2() {
         delay: 2  // 이전 애니메이션이 완료된 후 2초 뒤에 시작
     });
 
-    // section2
-    // progress
-    const horizontal = document.querySelector(".horizon__wrap");
-    gsap.to("progress", {
-        value: 100,
-        ease: "none",
-        scrollTrigger: {
-            scrub: 0.3,
-            trigger: "#section2",
-            start: "top bottom",
-            end: () => "+=" + (horizontal.offsetWidth),
-        }
-    })
-    // 이미지 효과 section2
-
-    const sections = gsap.utils.toArray(".horizon__wrap > .horizon");
-
-    let scrollTween = gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: horizontal,
-            start: "top top",
-            end: () => "+=" + (horizontal.offsetWidth - innerWidth),
-            pin: true,
-            scrub: 1,
-            invalidateOnRefresh: true,
-            anticipatePin: 1
-        }
-    })
-
-    gsap.to(".horizon.s1 > .container > .right img", {
-        y: 200,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-            trigger: ".horizon.s1 > .container > .right img",
-            containerAnimation: scrollTween,
-            start: "left center",
-            toggleActions: "play none reverse none",
-            markers: true,
-            id: "img1"
-        }
-    })
-    gsap.to(".horizon.s2 > .container > .right img", {
-        y: 200,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-            trigger: ".horizon.s2 > .container > .right img",
-            containerAnimation: scrollTween,
-            start: "left center",
-            toggleActions: "play none reverse none",
-            markers: true,
-            id: "img2"
-        }
-    })
-
-    gsap.to(".horizon.s3 > .container > .right img", {
-        y: 200,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-            trigger: ".horizon.s3 > .container > .right img",
-            containerAnimation: scrollTween,
-            start: "left center",
-            toggleActions: "play none reverse none",
-            markers: true,
-            id: "img3"
-        }
-    })
-
-    gsap.to(".horizon.s4 > .container > .right img", {
-        y: 200,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-            trigger: ".horizon.s4 > .container > .right img",
-            containerAnimation: scrollTween,
-            start: "left center",
-            toggleActions: "play none reverse none",
-            markers: true,
-            id: "img4"
-        }
-    })
-
-    gsap.to(".horizon.s5 > .container > .right img", {
-        y: 200,
-        duration: 2,
-        ease: "elastic",
-        scrollTrigger: {
-            trigger: ".horizon.s5 > .container > .right img",
-            containerAnimation: scrollTween,
-            start: "left center",
-            toggleActions: "play none reverse none",
-            markers: true,
-            id: "img5"
-        }
-    })
-
-
     // 마우스효과
     const mouseCursor = document.querySelector(".mouse__cursor");
     const popup = document.getElementById('nav__popup');
@@ -178,22 +77,67 @@ export function section2() {
 
 
     // section4 
+    // gsap.utils.toArray('#section4 .text').forEach((text, index) => {
+    //     gsap.from(text, {
+    //         y: 100,
+    //         opacity: 0,
+    //         duration: 1,
+    //         scrollTrigger: {
+    //             trigger: '#section4',
+    //             start: 'top center+=100',
+    //             end: 'bottom center-=100',
+    //             toggleActions: 'play none none none',
+    //         },
+    //         delay: index * 0.5, // 순차적으로 보여주기 위한 딜레이
+    //     });
+    // });
     gsap.utils.toArray('#section4 .text').forEach((text, index) => {
-        gsap.from(text, {
+        const textTween = gsap.from(text, {
             y: 100,
             opacity: 0,
-            duration: 1,
+            duration: 0.8, // 더 긴 애니메이션 지속 시간
+            ease: 'Power1.easeInOut', // 이징 함수 추가
             scrollTrigger: {
                 trigger: '#section4',
-                start: 'top center+=100',
-                end: 'bottom center-=100',
+                start: `top center+=${index * -100}`, // 50%씩 차이
+                end: `bottom bottom-=${index * -25}`,
                 toggleActions: 'play none none none',
+                scrub: 0.5,
+                markers: true
             },
-            delay: index * 0.5, // 순차적으로 보여주기 위한 딜레이
+            delay: index * 0.5,
+            onComplete: () => {
+                // 텍스트가 사라질 때의 애니메이션
+                gsap.to(text, {
+                    opacity: 0,
+                    duration: 0.8, // 더 긴 애니메이션 지속 시간
+                    ease: 'Power1.easeInOut', // 이징 함수 추가
+                    onComplete: () => {
+                        // 애니메이션이 완전히 끝난 후에 display를 none으로 변경
+                        text.style.display = 'none';
+                    },
+                });
+            },
+        });
+    
+        gsap.to(text, {
+            color: '#624B74',
+            ease: 'Power1.easeInOut', // 이징 함수 추가
+            scrollTrigger: {
+                trigger: '#section4',
+                start: `top center+=${index * -100}`, // 50%씩 차이
+                end: `bottom bottom-=${index * -25}`,
+                scrub: 0.5,
+                markers: true
+            },
+            onUpdate: () => {
+                const progress = textTween.progress();
+                const opacity = 1 - progress; // 1부터 시작하여 0으로 감소하도록 계산
+                text.style.background = `linear-gradient(to right, rgba(50, 50, 50, ${opacity}) ${progress * 300}%, transparent ${progress * 300}%)`;
+            },
         });
     });
-
-
+    // section6
 
     // nav show&hide
     // GSAP 애니메이션 코드
