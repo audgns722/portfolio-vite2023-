@@ -32,10 +32,17 @@ canvas {
     position: relative;
     font-family: var(--mainfont-monuR);
 
+    @media (max-width : 800px) {
+        margin: 0 24px;
+    }
+
     .main__text {
         font-size: 6vw;
         line-height: 1.1;
 
+        @media (max-width : 800px) {
+            font-size: 7.5vw;
+        }
     }
 
     .intro__bottom {
@@ -46,7 +53,8 @@ canvas {
         .bar {
             height: 1px;
             background-color: rgb(254, 252, 248);
-            width: 50px;
+            width: 2.6vw;
+            min-width: 30px;
         }
 
         .text {
@@ -56,6 +64,10 @@ canvas {
                 line-height: 1;
                 font-size: 1.6rem;
                 position: relative;
+
+                @media (max-width : 800px) {
+                    font-size: 1.2rem;
+                }
 
                 img {
                     position: absolute;

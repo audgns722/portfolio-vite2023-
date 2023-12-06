@@ -20,46 +20,47 @@ export function horizon() {
             end: () => "+=" + (horizontal.offsetWidth - innerWidth),
             pin: true,
             scrub: 1,
+            // snap: 1,
             invalidateOnRefresh: true,
             anticipatePin: 1,
         },
     });
-    
 
-// 이미지 애니메이션을 만들기 위한 함수 정의
-const createImageAnimation = (trigger, containerAnimation, id, offsetY, offsetX, duration, ease, customStart, customEnd) => {
-    gsap.fromTo(
-        trigger,
-        {
-            opacity: 0,
-            y: offsetY,
-            x: offsetX, // 새로운 속성: x 좌표
-        },
-        {
-            opacity: 1,
-            y: 0,
-            x: 0, // 새로운 속성: x 좌표를 0으로 변경
-            duration: duration,
-            ease: ease,
-            scrollTrigger: {
-                trigger,
-                containerAnimation,
-                start: customStart || "left 50%",  // customStart 값이 없으면 기본값 사용
-                end: customEnd || "right 50%",    // customEnd 값이 없으면 기본값 사용
-                toggleActions: "play none reverse none",
-                markers: true,
-                id,
+
+    // 이미지 애니메이션을 만들기 위한 함수 정의
+    const createImageAnimation = (trigger, containerAnimation, id, offsetY, offsetX, duration, ease, customStart, customEnd) => {
+        gsap.fromTo(
+            trigger,
+            {
+                opacity: 0,
+                y: offsetY,
+                x: offsetX, // 새로운 속성: x 좌표
             },
-        }
-    );
-};
+            {
+                opacity: 1,
+                y: 0,
+                x: 0, // 새로운 속성: x 좌표를 0으로 변경
+                duration: duration,
+                ease: ease,
+                scrollTrigger: {
+                    trigger,
+                    containerAnimation,
+                    start: customStart || "left 50%",  // customStart 값이 없으면 기본값 사용
+                    end: customEnd || "right 50%",    // customEnd 값이 없으면 기본값 사용
+                    toggleActions: "play none reverse none",
+                    // markers: true,
+                    id,
+                },
+            }
+        );
+    };
 
-// 이미지 애니메이션 함수 호출하여 각 이미지에 대한 애니메이션 설정
-createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 250, 0, 2, "bounce.out", "left 70%", "right 100%");
-createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
-createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
-createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
-createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
+    // 이미지 애니메이션 함수 호출하여 각 이미지에 대한 애니메이션 설정
+    createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 250, 0, 2, "bounce.out", "left 70%", "right 100%");
+    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
+    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
+    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
+    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, -200, 2, "bounce.out", "left 60%", "right 100%");
 
     // progress
     gsap.to("progress", {

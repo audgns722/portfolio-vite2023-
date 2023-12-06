@@ -6,6 +6,7 @@ export function section2() {
 
     // section1
     const elements = document.querySelectorAll("#section1 > .intro__text > *");
+    const body = document.body;
 
     // 각 요소에 대한 GSAP 효과 설정
     elements.forEach((element, index) => {
@@ -52,6 +53,8 @@ export function section2() {
     const mouseCursor = document.querySelector(".mouse__cursor");
     const popup = document.getElementById('nav__popup');
 
+    let scrollPosition;
+
     gsap.to(mouseCursor, {
         scrollTrigger: {
             trigger: "#section2",
@@ -77,20 +80,6 @@ export function section2() {
 
 
     // section4 
-    // gsap.utils.toArray('#section4 .text').forEach((text, index) => {
-    //     gsap.from(text, {
-    //         y: 100,
-    //         opacity: 0,
-    //         duration: 1,
-    //         scrollTrigger: {
-    //             trigger: '#section4',
-    //             start: 'top center+=100',
-    //             end: 'bottom center-=100',
-    //             toggleActions: 'play none none none',
-    //         },
-    //         delay: index * 0.5, // 순차적으로 보여주기 위한 딜레이
-    //     });
-    // });
     gsap.utils.toArray('#section4 .text').forEach((text, index) => {
         const textTween = gsap.from(text, {
             y: 100,
@@ -99,8 +88,8 @@ export function section2() {
             ease: 'Power1.easeInOut', // 이징 함수 추가
             scrollTrigger: {
                 trigger: '#section4',
-                start: `top center+=${index * -100}`, // 50%씩 차이
-                end: `bottom bottom-=${index * -25}`,
+                start: `top bottom+=${index * -100}`, // 50%씩 차이
+                end: `bottom bottom-=${index * 25}`,
                 toggleActions: 'play none none none',
                 scrub: 0.5,
                 markers: true
@@ -112,21 +101,17 @@ export function section2() {
                     opacity: 0,
                     duration: 0.8, // 더 긴 애니메이션 지속 시간
                     ease: 'Power1.easeInOut', // 이징 함수 추가
-                    onComplete: () => {
-                        // 애니메이션이 완전히 끝난 후에 display를 none으로 변경
-                        text.style.display = 'none';
-                    },
                 });
             },
         });
-    
+
         gsap.to(text, {
             color: '#624B74',
             ease: 'Power1.easeInOut', // 이징 함수 추가
             scrollTrigger: {
                 trigger: '#section4',
-                start: `top center+=${index * -100}`, // 50%씩 차이
-                end: `bottom bottom-=${index * -25}`,
+                start: `top bottom+=${index * -100}`, // 50%씩 차이
+                end: `bottom bottom-=${index * 25}`,
                 scrub: 0.5,
                 markers: true
             },
@@ -137,6 +122,8 @@ export function section2() {
             },
         });
     });
+
+
     // section6
 
     // nav show&hide
@@ -145,15 +132,27 @@ export function section2() {
     const text = document.querySelector('.header__navmob .text');
 
     // 초기 상태 설정
-    gsap.set(popup, { autoAlpha: 0, height: 0, display: 'none' });
+    // gsap.set(popup, { autoAlpha: 0, y: "50%", display: 'none' });
 
     // 버튼 클릭 시 애니메이션
     btn.addEventListener('click', () => {
         if (popup.style.display === 'none') {
-            gsap.to(popup, { duration: 0.5, autoAlpha: 1, height: '100%', display: 'block', ease: 'power4.easeInOut' });
+            // Store the current scroll position
+            scrollPosition = window.scrollY;
+
+            // Disable scrolling on the body
+            body.classList.add('no-scroll');
+
+            gsap.to(popup, { duration: 0.2, autoAlpha: 1, y: "0%", height: '100vh', display: 'block', ease: 'power4.ease' });
             text.textContent = 'Close';
         } else {
-            gsap.to(popup, { duration: 0.5, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.easeInOut' });
+            // Enable scrolling on the body
+            body.classList.remove('no-scroll');
+
+            // Restore the scroll position
+            window.scrollTo(0, scrollPosition);
+
+            gsap.to(popup, { duration: 0.1, autoAlpha: 0, y: "-50%", height: 0, display: 'none', ease: 'power4.ease' });
             text.textContent = 'Menu';
         }
     });

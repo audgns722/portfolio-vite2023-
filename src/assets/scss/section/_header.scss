@@ -11,7 +11,9 @@
     margin: 57px 68px 0 68px;
     justify-content: space-between;
 
-
+    @media (max-width:800px) {
+        margin: 42px 20px 0 20px;
+    }
 }
 
 .header__logo {
@@ -78,7 +80,7 @@
         width: 145px;
         height: 30px;
         border-radius: 15px;
-        background-color: #4f4f5513;
+        background-color: #6a6a7c9a;
         position: relative;
         display: flex;
         align-items: center;
