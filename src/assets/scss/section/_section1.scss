@@ -81,9 +81,9 @@ canvas {
                     /* 속성명을 rotate에서 transform으로 변경 */
 
                     /* 마우스 호버시 회전 */
-                    &:hover {
-                        transform: rotate(220deg) scale(0.9);
-                    }
+                    // &:hover {
+                    //     transform: rotate(220deg) scale(0.9);
+                    // }
                 }
 
             }

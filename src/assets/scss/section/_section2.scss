@@ -266,14 +266,14 @@
 
 .parallax__progress progress {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 1000;
     width: 100%;
     height: 10px;
     border: none;
     background: transparent;
-    opacity: 0.7;
+    opacity: 0.5;
     filter: blur(2px);
 
 }
@@ -283,11 +283,13 @@
 }
 
 .parallax__progress progress::-webkit-progress-value {
-    background: linear-gradient(to left, #3b0e49, #7d01e3, #ba25ce, #5c1859, #4b0439, #300024);
+    background: linear-gradient(90deg, rgba(210, 143, 209, 1) 0%, rgba(160, 67, 187, 1) 16%, rgba(126, 21, 191, 1) 35%, rgba(64, 6, 97, 1) 62%, rgba(41, 0, 66, 1) 83%, rgba(34, 0, 42, 1) 100%);
+    // background-color: #fff;
     background-attachment: fixed;
 }
 
 .parallax__progress progress::-moz-progress-bar {
-    background: linear-gradient(to left, #3b0e49, #7d01e3, #ba25ce, #5c1859, #4b0439, #300024);
+    background: linear-gradient(90deg, rgba(210, 143, 209, 1) 0%, rgba(160, 67, 187, 1) 16%, rgba(126, 21, 191, 1) 35%, rgba(64, 6, 97, 1) 62%, rgba(41, 0, 66, 1) 83%, rgba(34, 0, 42, 1) 100%);
+    // background-color: #fff;
     background-attachment: fixed;
 }

@@ -92,7 +92,7 @@ export function section2() {
                 end: `bottom bottom-=${index * 25}`,
                 toggleActions: 'play none none none',
                 scrub: 0.5,
-                markers: true
+                // markers: true
             },
             delay: index * 0.5,
             onComplete: () => {
@@ -113,7 +113,7 @@ export function section2() {
                 start: `top bottom+=${index * -100}`, // 50%씩 차이
                 end: `bottom bottom-=${index * 25}`,
                 scrub: 0.5,
-                markers: true
+                // markers: true
             },
             onUpdate: () => {
                 const progress = textTween.progress();
@@ -124,7 +124,55 @@ export function section2() {
     });
 
 
-    // section6
+    // section5
+    gsap.from(".content__wrap > .right", {
+        scrollTrigger: {
+            trigger: "#section5",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1
+        },
+        duration: 0.5,
+        scale: 0.5, // 시작 시 크기를 0.5로 설정
+        opacity: 0, // 시작 시 투명도를 0으로 설정
+        ease: "power1.out",
+        delay: 0.5,
+    });
+
+
+    // section6 
+    gsap.to(".about__intro", {
+        scrollTrigger: {
+            trigger: "#section6",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1
+        },
+        opacity: 0,
+        duration: 1
+    });
+
+    // 
+    // section1
+    gsap.to(".intro__bottom img", {
+        scrollTrigger: {
+            trigger: "#section1",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1
+        },
+        deg: 0,
+        duration: 1,
+        marker: true,
+    }, {
+        // 스크롤이 진행되면서 이미지의 DEG값을 증가시킵니다.
+        onUpdate: function () {
+            gsap.set("#section1 .intro__bottom .svg", {
+                deg: (this.progress % 360)
+            });
+        }
+    });
+
 
     // nav show&hide
     // GSAP 애니메이션 코드
