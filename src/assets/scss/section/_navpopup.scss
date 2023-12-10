@@ -4,7 +4,8 @@
     background-color: #231F51;
     display: none;
     position: fixed;
-    top: 0;
+    transform: translateY(-50%);
+    top: 50%;
     left: 0;
 
     .popup__wrap {
@@ -130,18 +131,8 @@
 
 
                     img {
-                        height: 100%;
-                        border-radius: 25vw 25vw 0 0;
                         object-fit: cover;
 
-                        @media (max-width: 600px) {
-                            border-radius: 50vw 50vw 0 0;
-                        }
-
-                        &:hover {
-                            border-radius: 0;
-                            transition: border-radius 0.4s;
-                        }
                     }
 
                 }

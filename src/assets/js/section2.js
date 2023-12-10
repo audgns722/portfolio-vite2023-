@@ -10,20 +10,84 @@ export function section2() {
 
     // 각 요소에 대한 GSAP 효과 설정
     elements.forEach((element, index) => {
+    if (index === 0) {
+        // 첫 번째 text
         gsap.from(element, {
-            opacity: 0,
-            y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
-            duration: 0.8,
-            ease: "power4.out", // 애니메이션 이징 설정
-            delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
-            scrollTrigger: {
-                trigger: element,
-                start: "top 80%",
-                toggleActions: "play none none none",
-            },
-        });
+        opacity: 0,
+        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
+        duration: 0.8,
+        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
+        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
+        scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+
+        // 효과 추가
+        scale: 1.5, // 크기를 1.5배로 변경
+        transform: "translateX(-500) scale(0.5)", // 시작 시 위치와 크기를 변경
+        }, "-=0.4");
+    } else if (index === 1) {
+        // 두 번째 text
+        gsap.from(element, {
+        opacity: 0,
+        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
+        duration: 0.8,
+        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
+        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
+        scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+
+        // 효과 추가
+        scale: 2, // 크기를 2배로 변경
+        transform: "translateX(500) scale(0.5)", // 시작 시 위치와 크기를 변경
+        }, "-=0.4");
+    } else {
+        // 세 번째 text
+        gsap.from(element, {
+        opacity: 0,
+        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
+        duration: 0.8,
+        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
+        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
+        scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+        },
+
+        // 효과 추가
+        scale: 1.5, // 크기를 1.5배로 변경
+        transform: "translateX(0) scale(0.5)", // 시작 시 위치와 크기를 변경
+        }, "-=0.4");
+    }
     });
 
+// 이미지 요소 가져오기
+const img = document.querySelector('#section1 .intro__bottom img');
+
+// 스크롤 이벤트 리스너 추가
+window.addEventListener('scroll', () => {
+  // 스크롤 위치 계산
+  const scrollY = window.scrollY;
+
+  // 스크롤 위치에 따라 클래스 추가
+  if (scrollY > 20) {
+    img.classList.add('rotate');
+  } else {
+    img.classList.remove('rotate');
+  }
+});
+
+
+
+
+
+    // section3
     gsap.to(".slide__text", {
         scrollTrigger: {
             trigger: "#section3",
@@ -78,6 +142,38 @@ export function section2() {
         }
     });
 
+        // GSAP 애니메이션 코드
+        const btn = document.querySelector('.header__navmob .btn');
+        const text = document.querySelector('.header__navmob .text');
+    
+        // 초기 상태 설정
+        gsap.set(popup, {display: 'none' });
+    
+        // 버튼 클릭 시 애니메이션
+        btn.addEventListener('click', () => {
+            if (popup.style.display === 'none') {
+                // Store the current scroll position
+                scrollPosition = window.scrollY;
+    
+                // Disable scrolling on the body
+                body.classList.add('no-scroll');
+    
+                gsap.to(popup, { duration: 0.3, autoAlpha: 1,  height: '100vh', display: 'block', ease: 'power4.ease' });
+                text.textContent = 'Close';
+            } else {
+                // Enable scrolling on the body
+                body.classList.remove('no-scroll');
+    
+                // Restore the scroll position
+                window.scrollTo(0, scrollPosition);
+    
+                gsap.to(popup, { duration: 0.3, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.ease' });
+                text.textContent = 'Menu';
+            }
+        });
+    
+    
+
 
     // section4 
     gsap.utils.toArray('#section4 .text').forEach((text, index) => {
@@ -127,29 +223,35 @@ export function section2() {
     // section5
     gsap.from(".content__wrap > .right", {
         scrollTrigger: {
-            trigger: "#section5",
-            start: "top center",
-            end: "bottom center",
-            scrub: 1
+        trigger: "#section5",
+        start: "top center",
+        end: "bottom center",
+        scrub: 1
         },
         duration: 0.5,
         scale: 0.5, // 시작 시 크기를 0.5로 설정
         opacity: 0, // 시작 시 투명도를 0으로 설정
         ease: "power1.out",
         delay: 0.5,
-    });
+    
+        // 효과 변경
+        scale: 1, // 크기를 1로 변경
+    }, "-=0.5");
 
 
-    // section6 
-    gsap.to(".about__intro", {
-        scrollTrigger: {
-            trigger: "#section6",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1
-        },
-        opacity: 0,
-        duration: 1
+    document.addEventListener("DOMContentLoaded", function() {
+        // GSAP 코드 여기에 추가
+        gsap.to(".about__intro", {
+            scrollTrigger: {
+                trigger: "#section6",
+                start: "top center",
+                end: "bottom bottom",
+                scrub: 1,
+                markers: true,
+            },
+            opacity: 0,
+            duration: 1
+        });
     });
 
     // 
@@ -173,36 +275,5 @@ export function section2() {
         }
     });
 
-
-    // nav show&hide
-    // GSAP 애니메이션 코드
-    const btn = document.querySelector('.header__navmob .btn');
-    const text = document.querySelector('.header__navmob .text');
-
-    // 초기 상태 설정
-    // gsap.set(popup, { autoAlpha: 0, y: "50%", display: 'none' });
-
-    // 버튼 클릭 시 애니메이션
-    btn.addEventListener('click', () => {
-        if (popup.style.display === 'none') {
-            // Store the current scroll position
-            scrollPosition = window.scrollY;
-
-            // Disable scrolling on the body
-            body.classList.add('no-scroll');
-
-            gsap.to(popup, { duration: 0.2, autoAlpha: 1, y: "0%", height: '100vh', display: 'block', ease: 'power4.ease' });
-            text.textContent = 'Close';
-        } else {
-            // Enable scrolling on the body
-            body.classList.remove('no-scroll');
-
-            // Restore the scroll position
-            window.scrollTo(0, scrollPosition);
-
-            gsap.to(popup, { duration: 0.1, autoAlpha: 0, y: "-50%", height: 0, display: 'none', ease: 'power4.ease' });
-            text.textContent = 'Menu';
-        }
-    });
 }
 

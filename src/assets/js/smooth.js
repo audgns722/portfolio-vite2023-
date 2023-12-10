@@ -8,7 +8,7 @@ export function smooth() {
 
 
     lenis.on('scroll', (e) => {
-        console.log(e)
+        
     })
 
     function raf(time) {

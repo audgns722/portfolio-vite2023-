@@ -16,13 +16,16 @@
     <!-- <canvas class="p-canvas-webgl" id="canvas-webgl"></canvas> -->
     <header id="header">
         <div class="header__inner">
-            <div class="header__logo">
-                <img src="assets/img/logo.svg" alt="logosvg" />
-                <h1>
-                    M.HUN<br />
-                    PORTFOLIO
-                </h1>
-            </div>
+            <a href="/">
+                <div class="header__logo">
+                    <img src="assets/img/logo.svg" alt="logosvg" />
+                    <h1>
+                        M.HUN<br />
+                        PORTFOLIO
+                    </h1>
+                </div>
+            </a>
+
             <!-- <div class="header__nav">
                 <a to="/home" class="active">Home</a>
                 <a to="/intro">About Me</a>
@@ -104,7 +107,7 @@
                         </div>
                     </div>
                     <div class='right'>
-                        <img src="assets/img/recyclemockup.png" alt="테스트 이미지" />
+                        <img src="assets/img/recyclemock2.png" alt="php프로젝트" />
                     </div>
                 </div>
             </div>
@@ -150,7 +153,7 @@
                         </div>
                     </div>
                     <div class='right'>
-                        <img src="assets/img/testimg.png" alt="테스트 이미지" />
+                        <img src="assets/img/portfoliomock.png" alt="reactportimage" />
                     </div>
                 </div>
             </div>
@@ -195,7 +198,7 @@
                         </div>
                     </div>
                     <div class='right'>
-                        <img id="img3" src="assets/img/reactyoutube.png" alt="테스트 이미지" />
+                        <img id="img3" src="assets/img/youtubemock.png" alt="youtubesiteimage" />
                     </div>
                 </div>
             </div>
@@ -226,22 +229,23 @@
                             MOVIE SITE
                         </div>
                         <div class='sub__title h4'>Do not be afraid of failure</div>
-                        <div class='desc'>MOVIEKING CINEMA는 사용자와의 소통이 이루어지는 공간이기도 합니다. 피드백을 받으면서 서비스를 개선하는 과정에서, 사용자들과
-                            함께 성장하고 더 나은 경험을 제공하는 방향으로 나아가고 있습니다. 사용자들과의 소통은 단순히 서비스를 제공하는 것 이상으로, 더 큰 가치를 창출하고 있습니다.
+                        <div class='desc'>MovieKing은 Vue.js의 다양한 기능을 활용하여 영화 정보를 편리하게 찾고 공유할 수 있는 플랫폼을 제공합니다.
+                            최신영화, 인기영화, 개봉영화, 최고평점를 카테고리별로 볼수 있고, 
+                            영화 목록을 클릭하면 해당 영화의 상세 정보를 볼 수 있습니다. 상세 정보에는 영화의 장르, 러닝타임, 출연진 등의 정보가 포함됩니다. 또한, 영화의 썸네일을 클릭하면 예고편을 볼 수 있는 링크도 제공됩니다.
                         </div>
                         <div class="btn h4">
-                            <a to="/">
+                            <a href="https://vue-movieking-site-project2023.netlify.app" target="_blank">
                                 <div class="text">view</div>
                                 <div class="arrow"></div>
-                            </a>
-                            <a to="/">
+                              </a>
+                              <a href="https://github.com/audgns722/vue-movie-porject2023" target="_blank">
                                 <div class="text">code</div>
                                 <div class="arrow"></div>
                             </a>
                         </div>
                     </div>
                     <div class='right'>
-                        <img id="img4" src="assets/img/vuemovie.png" alt="테스트 이미지" />
+                        <img id="img4" src="assets/img/moviemock.png" alt="moviekingimage" />
                     </div>
                 </div>
             </div>
@@ -287,7 +291,7 @@
                         </div>
                     </div>
                     <div class='right'>
-                        <img id="img5" src="assets/img/testimg.png" alt="테스트 이미지" />
+                        <img id="img5" src="assets/img/reactportmock.png" alt="portfolioimage" />
                     </div>
                 </div>
             </div>
@@ -651,21 +655,25 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/img/reactyoutube.png" alt="/">
+                        <img src="assets/img/youtubemock.png" alt="/">
                         <p>React-YoutubeProject</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/recyclemockup.png" alt="/">
+                        <img src="assets/img/recyclemock.png" alt="/">
                         <p>Php-Recycle</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/reactyoutube.png" alt="/">
+                        <img src="assets/img/moviemock.png" alt="/">
+                        <p>Vue-MovieKing</p>
+                        
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/reactyoutube.png" alt="/">
+                        <img src="assets/img/portfoliomock.png" alt="/">
+                        <p>React-Portfolio</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/img/reactyoutube.png" alt="/">
+                        <img src="assets/img/reactportmock.png" alt="/">
+                        <p>React-Portfolio</p>
                     </div>
                 </div>
                 <div class="imgbtn">
@@ -680,6 +688,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
             effect: "flip",
             flipEffect: {
                 slideShadows: true,
