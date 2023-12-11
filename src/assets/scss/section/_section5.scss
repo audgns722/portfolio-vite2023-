@@ -6,23 +6,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
-    .sections.s2 {
-      @media (max-width:800px) {
-        align-items: normal;
-        height: auto;
-
-      }
-    }
-
+    
     .sections {
       display: flex;
       align-items: center;
       height: 100%;
-      // max-width: 1920px;
-      width: 100%;
-
-
+      // width: 100%;
+      max-width: 1920px;
+      
       .content__wrap {
         display: flex;
         justify-content: space-between;
@@ -208,7 +199,7 @@
         .grid {
           width: 100%;
           display: grid;
-          grid-template-columns: repeat(5, 18%);
+          grid-template-columns: repeat(5, 250px);
           grid-gap: 32px;
           position: relative;
           z-index: 1;

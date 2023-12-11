@@ -7,8 +7,7 @@ export function horizon() {
     // .horizon__wrap 요소와 .horizon 요소들을 변수에 할당
     const horizontal = document.querySelector(".horizon__wrap");
     const horSection = gsap.utils.toArray(".horizon__wrap > .horizon");
-    const horSection2 = gsap.utils.toArray(".sections");
-    const section5Animations = gsap.utils.toArray("#section5 .sections");
+
 
 
     // 첫 번째 섹션에 대한 가로 스크롤 애니메이션 정의
@@ -51,7 +50,7 @@ export function horizon() {
                     start: customStart || "left 50%",  // customStart 값이 없으면 기본값 사용
                     end: customEnd || "right 50%",    // customEnd 값이 없으면 기본값 사용
                     toggleActions: "play none reverse none",
-                    markers: true,
+                    // markers: true,
                     id,
                 },
             }
@@ -59,11 +58,11 @@ export function horizon() {
     };
 
     // 이미지 애니메이션 함수 호출하여 각 이미지에 대한 애니메이션 설정
-    createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 0, 0, 1.5, 1, "expo.in", "left 50%", "right 70%");
-    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 0, 0, 1, 1.5, "expo.in", "left 50%", "right 70%");
+    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, 0, 1, 1.5, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, 0, 1, 1.5, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, 0, 1, 1.5, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, 0, 1, 1.5, "expo.in", "left 90%", "right 100%");
 
 
     // progress
@@ -79,17 +78,26 @@ export function horizon() {
     })
 
 
-    // 두 번째 섹션에 대한 추가적인 애니메이션 (필요시)
+    const horizontal2 = document.querySelector(".section__wrap");
+    const horSection2 = gsap.utils.toArray(".sections");
+    
+    // .sections 요소들의 실제 총 너비를 계산
+    let totalWidth = 0;
+    horSection2.forEach(section => {
+        totalWidth += section.offsetWidth;
+    });
+    
     gsap.to(horSection2, {
-        xPercent: -100,
+        xPercent: -100 * (horSection2.length - 1),
         ease: "none",
         scrollTrigger: {
             trigger: "#section5",
             start: "top top",
-            end: "200%",
+            // 총 너비에 따라 애니메이션의 종료 지점을 설정
+            end: () => "+=" + (totalWidth - window.innerWidth),
             pin: true,
             scrub: 1,
-            invalidateOnRefresh: true,
+            invalidateOnRefresh: true,  // 뷰포트 크기가 변경될 때마다 스크롤 트리거를 재계산
             anticipatePin: 1,
         },
     });

@@ -3,23 +3,22 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export function section2() {
     gsap.registerPlugin(ScrollTrigger);
-    const body = document.body;
 
     // loading 
-    gsap.fromTo("#loading", { display: "block" }, { display: "none", delay: 10 })
-    gsap.fromTo("#main", { display: "none" }, { display: "block", delay: 10 })
-    gsap.fromTo("#loading .clouds", { opacity: 0, scale: 1.5 }, { opacity: 1, duration: 10, scale: 1 });
-    gsap.fromTo("#loading .quote span", { opacity: 1, y: 0 }, { duration: 1, opacity: 0, y: -100, delay: 5 });
-    document.addEventListener("DOMContentLoaded", function () {
-        // Wait for the DOM to be fully loaded
-        setTimeout(function () {
-            // Hide the loading element
-            document.getElementById("loading").style.display = "none";
-            // Show the main content
-            document.getElementById("main").style.display = "block";
-            document.getElementById("header").style.display = "block";
-        }, 3000); // 3000 milliseconds (3 seconds) delay
-    });
+    // gsap.fromTo("#loading", { display: "block" }, { display: "none", delay: 10 })
+    // gsap.fromTo("#main", { display: "none" }, { display: "block", delay: 10 })
+    // gsap.fromTo("#loading .clouds", { opacity: 0, scale: 1.5 }, { opacity: 1, duration: 10, scale: 1 });
+    // gsap.fromTo("#loading .quote span", { opacity: 1, y: 0 }, { duration: 1, opacity: 0, y: -100, delay: 5 });
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     // Wait for the DOM to be fully loaded
+    //     setTimeout(function () {
+    //         // Hide the loading element
+    //         document.getElementById("loading").style.display = "none";
+    //         // Show the main content
+    //         document.getElementById("main").style.display = "block";
+    //         document.getElementById("header").style.display = "block";
+    //     }, 3000); // 3000 milliseconds (3 seconds) delay
+    // });
     // section1
 
     document.querySelectorAll(".split").forEach(desc => {
@@ -37,7 +36,7 @@ export function section2() {
     gsap.fromTo(".main__text.t1 span", { y: 50, opacity: 0 }, { duration: 0.7, y: 0, stagger: 0.04, opacity: 1, ease: "expo.out" });
     gsap.fromTo(".main__text.t2 span", { y: 100, opacity: 0 }, { duration: 0.7, y: 0, stagger: 0.04, opacity: 1, ease: "expo.out", delay: 0.5 });
     gsap.fromTo(".intro__bottom", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "expo.out", delay: 0.8 });
-    gsap.fromTo(canvas, { opacity: 0 }, { duration: 2, scale: 1, opacity: 0.2, delay: 1.5, position: "fixed" })
+    gsap.fromTo(canvas, { opacity: 0 }, { duration: 2, scale: 1, opacity: 0.2, delay: 1.5, })
 
 
     // 이미지 요소 가져오기
@@ -133,35 +132,35 @@ export function section2() {
         }
     });
 
-    // GSAP 애니메이션 코드 
-    const btn = document.querySelector('.header__navmob .btn');
-    const text = document.querySelector('.header__navmob .text');
+    // // GSAP 애니메이션 코드 
+    // const btn = document.querySelector('.header__navmob .btn');
+    // const text = document.querySelector('.header__navmob .text');
 
-    // 초기 상태 설정
-    gsap.set(popup, { display: 'none' });
+    // // 초기 상태 설정
+    // gsap.set(popup, { display: 'none' });
 
-    // 버튼 클릭 시 애니메이션
-    btn.addEventListener('click', () => {
-        if (popup.style.display === 'none') {
-            // Store the current scroll position
-            scrollPosition = window.scrollY;
+    // // 버튼 클릭 시 애니메이션
+    // btn.addEventListener('click', () => {
+    //     if (popup.style.display === 'none') {
+    //         // Store the current scroll position
+    //         scrollPosition = window.scrollY;
 
-            // Disable scrolling on the body
-            body.classList.add('no-scroll');
+    //         // Disable scrolling on the body
+    //         body.classList.add('no-scroll');
 
-            gsap.to(popup, { duration: 0.3, autoAlpha: 1, height: '100vh', display: 'block', ease: 'power4.ease' });
-            text.textContent = 'Close';
-        } else {
-            // Enable scrolling on the body
-            body.classList.remove('no-scroll');
+    //         gsap.to(popup, { duration: 0.3, autoAlpha: 1, height: '100vh', display: 'block', ease: 'power4.ease' });
+    //         text.textContent = 'Close';
+    //     } else {
+    //         // Enable scrolling on the body
+    //         body.classList.remove('no-scroll');
 
-            // Restore the scroll position
-            window.scrollTo(0, scrollPosition);
+    //         // Restore the scroll position
+    //         window.scrollTo(0, scrollPosition);
 
-            gsap.to(popup, { duration: 0.3, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.ease' });
-            text.textContent = 'Menu';
-        }
-    });
+    //         gsap.to(popup, { duration: 0.3, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.ease' });
+    //         text.textContent = 'Menu';
+    //     }
+    // });
 
 
 

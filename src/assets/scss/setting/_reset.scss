@@ -145,3 +145,9 @@ select {
     text-indent: -9999px;
     white-space: nowrap;
 }
+
+.hidden {
+    display: none;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition effect */
+}
