@@ -29,11 +29,12 @@ export function horizon() {
 
 
     // 이미지 애니메이션을 만들기 위한 함수 정의
-    const createImageAnimation = (trigger, containerAnimation, id, offsetY, offsetX, duration, ease, customStart, customEnd) => {
+    const createImageAnimation = (trigger, containerAnimation, id, offsetY, offsetX, duration, scale, ease, customStart, customEnd) => {
         gsap.fromTo(
             trigger,
             {
                 opacity: 0,
+                scale: 0.8,
                 y: offsetY,
                 x: offsetX, // 새로운 속성: x 좌표
             },
@@ -42,6 +43,7 @@ export function horizon() {
                 y: 0,
                 x: 0, // 새로운 속성: x 좌표를 0으로 변경
                 duration: duration,
+                scale: scale,
                 ease: ease,
                 scrollTrigger: {
                     trigger,
@@ -57,11 +59,11 @@ export function horizon() {
     };
 
     // 이미지 애니메이션 함수 호출하여 각 이미지에 대한 애니메이션 설정
-    createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 250, 0, 1, "back.out", "left 70%", "right 100%");
-    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, -200, 1, "back.out", "left 60%", "right 100%");
-    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, -200, 1, "back.out", "left 60%", "right 100%");
-    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, -200, 1, "back.out", "left 60%", "right 100%");
-    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, -200, 1, "back.out", "left 60%", "right 100%");
+    createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 0, 0, 1.5, 1, "expo.in", "left 50%", "right 70%");
+    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
 
 
     // progress

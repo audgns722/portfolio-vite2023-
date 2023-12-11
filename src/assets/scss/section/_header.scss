@@ -4,34 +4,35 @@
     position: fixed;
     top: 0;
     z-index: 1;
-}
 
-.header__inner {
-    display: flex;
-    margin: 57px 68px 0 68px;
-    justify-content: space-between;
+    .header__inner {
+        display: flex;
+        margin: 57px 68px 0 68px;
+        justify-content: space-between;
 
-    @media (max-width:800px) {
-        margin: 42px 20px 0 20px;
+        @media (max-width:800px) {
+            margin: 42px 20px 0 20px;
+        }
+    }
+
+    .header__logo {
+        display: flex;
+        height: 35px;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+
+        h1 {
+            font-family: var(--mainfont-monuR);
+            line-height: 1;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
     }
 }
 
-.header__logo {
-    display: flex;
-    height: 35px;
-    align-items: center;
-
-    img {
-        width: 100%;
-    }
-
-    h1 {
-        font-family: var(--mainfont-monuR);
-        line-height: 1;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-}
 
 .hide {
     display: none !important;

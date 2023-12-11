@@ -3,87 +3,78 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export function section2() {
     gsap.registerPlugin(ScrollTrigger);
-
-    // section1
-    const elements = document.querySelectorAll("#section1 > .intro__text > *");
     const body = document.body;
 
-    // 각 요소에 대한 GSAP 효과 설정
-    elements.forEach((element, index) => {
-    if (index === 0) {
-        // 첫 번째 text
-        gsap.from(element, {
-        opacity: 0,
-        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
-        duration: 0.8,
-        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
-        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
-        scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
+    // loading 
+    gsap.fromTo("#loading", { display: "block" }, { display: "none", delay: 10 })
+    gsap.fromTo("#main", { display: "none" }, { display: "block", delay: 10 })
+    gsap.fromTo("#loading .clouds", { opacity: 0, scale: 1.5 }, { opacity: 1, duration: 10, scale: 1 });
+    gsap.fromTo("#loading .quote span", { opacity: 1, y: 0 }, { duration: 1, opacity: 0, y: -100, delay: 5 });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Wait for the DOM to be fully loaded
+        setTimeout(function () {
+            // Hide the loading element
+            document.getElementById("loading").style.display = "none";
+            // Show the main content
+            document.getElementById("main").style.display = "block";
+            document.getElementById("header").style.display = "block";
+        }, 3000); // 3000 milliseconds (3 seconds) delay
+    });
+    // section1
 
-        // 효과 추가
-        scale: 1.5, // 크기를 1.5배로 변경
-        transform: "translateX(-500) scale(0.5)", // 시작 시 위치와 크기를 변경
-        }, "-=0.4");
-    } else if (index === 1) {
-        // 두 번째 text
-        gsap.from(element, {
-        opacity: 0,
-        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
-        duration: 0.8,
-        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
-        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
-        scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
+    document.querySelectorAll(".split").forEach(desc => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+    })
 
-        // 효과 추가
-        scale: 2, // 크기를 2배로 변경
-        transform: "translateX(500) scale(0.5)", // 시작 시 위치와 크기를 변경
-        }, "-=0.4");
-    } else {
-        // 세 번째 text
-        gsap.from(element, {
-        opacity: 0,
-        y: -50, // 위쪽에서 아래쪽으로 이동하는 정도
-        duration: 0.8,
-        ease: "easeInOutQuad easeOutExpo", // 애니메이션 이징 설정
-        delay: index * 0.2, // 각 요소의 시작 지연 시간을 조정하여 순차적으로 나타나게 함
-        scrollTrigger: {
-            trigger: element,
-            start: "top 80%",
-            toggleActions: "play none none none",
-        },
+    // canvas
+    const canvas = document.getElementById("canvas-webgl");
 
-        // 효과 추가
-        scale: 1.5, // 크기를 1.5배로 변경
-        transform: "translateX(0) scale(0.5)", // 시작 시 위치와 크기를 변경
-        }, "-=0.4");
-    }
+    // section1
+    gsap.fromTo(".main__text.t1 span", { y: 50, opacity: 0 }, { duration: 0.7, y: 0, stagger: 0.04, opacity: 1, ease: "expo.out" });
+    gsap.fromTo(".main__text.t2 span", { y: 100, opacity: 0 }, { duration: 0.7, y: 0, stagger: 0.04, opacity: 1, ease: "expo.out", delay: 0.5 });
+    gsap.fromTo(".intro__bottom", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "expo.out", delay: 0.8 });
+    gsap.fromTo(canvas, { opacity: 0 }, { duration: 2, scale: 1, opacity: 0.2, delay: 1.5, position: "fixed" })
+
+
+    // 이미지 요소 가져오기
+    const img = document.querySelector('#section1 .intro__bottom img');
+
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', () => {
+        // 스크롤 위치 계산
+        const scrollY = window.scrollY;
+
+        // 스크롤 위치에 따라 클래스 추가
+        if (scrollY > 20) {
+            img.classList.add('rotate');
+        } else {
+            img.classList.remove('rotate');
+        }
     });
 
-// 이미지 요소 가져오기
-const img = document.querySelector('#section1 .intro__bottom img');
-
-// 스크롤 이벤트 리스너 추가
-window.addEventListener('scroll', () => {
-  // 스크롤 위치 계산
-  const scrollY = window.scrollY;
-
-  // 스크롤 위치에 따라 클래스 추가
-  if (scrollY > 20) {
-    img.classList.add('rotate');
-  } else {
-    img.classList.remove('rotate');
-  }
-});
-
-
+    // section1 svg 스크롤 deg
+    gsap.to(".intro__bottom img", {
+        scrollTrigger: {
+            trigger: "#section1",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1
+        },
+        deg: 0,
+        duration: 1,
+        marker: true,
+    }, {
+        // 스크롤이 진행되면서 이미지의 DEG값을 증가시킵니다.
+        onUpdate: function () {
+            gsap.set("#section1 .intro__bottom .svg", {
+                deg: (this.progress % 360)
+            });
+        }
+    });
 
 
 
@@ -142,80 +133,82 @@ window.addEventListener('scroll', () => {
         }
     });
 
-        // GSAP 애니메이션 코드
-        const btn = document.querySelector('.header__navmob .btn');
-        const text = document.querySelector('.header__navmob .text');
-    
-        // 초기 상태 설정
-        gsap.set(popup, {display: 'none' });
-    
-        // 버튼 클릭 시 애니메이션
-        btn.addEventListener('click', () => {
-            if (popup.style.display === 'none') {
-                // Store the current scroll position
-                scrollPosition = window.scrollY;
-    
-                // Disable scrolling on the body
-                body.classList.add('no-scroll');
-    
-                gsap.to(popup, { duration: 0.3, autoAlpha: 1,  height: '100vh', display: 'block', ease: 'power4.ease' });
-                text.textContent = 'Close';
-            } else {
-                // Enable scrolling on the body
-                body.classList.remove('no-scroll');
-    
-                // Restore the scroll position
-                window.scrollTo(0, scrollPosition);
-    
-                gsap.to(popup, { duration: 0.3, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.ease' });
-                text.textContent = 'Menu';
-            }
-        });
-    
-    
+    // GSAP 애니메이션 코드 
+    const btn = document.querySelector('.header__navmob .btn');
+    const text = document.querySelector('.header__navmob .text');
+
+    // 초기 상태 설정
+    gsap.set(popup, { display: 'none' });
+
+    // 버튼 클릭 시 애니메이션
+    btn.addEventListener('click', () => {
+        if (popup.style.display === 'none') {
+            // Store the current scroll position
+            scrollPosition = window.scrollY;
+
+            // Disable scrolling on the body
+            body.classList.add('no-scroll');
+
+            gsap.to(popup, { duration: 0.3, autoAlpha: 1, height: '100vh', display: 'block', ease: 'power4.ease' });
+            text.textContent = 'Close';
+        } else {
+            // Enable scrolling on the body
+            body.classList.remove('no-scroll');
+
+            // Restore the scroll position
+            window.scrollTo(0, scrollPosition);
+
+            gsap.to(popup, { duration: 0.3, autoAlpha: 0, height: 0, display: 'none', ease: 'power4.ease' });
+            text.textContent = 'Menu';
+        }
+    });
+
+
+
+
 
 
     // section4 
     gsap.utils.toArray('#section4 .text').forEach((text, index) => {
         const textTween = gsap.from(text, {
-            y: 100,
+            y: 150,
             opacity: 0,
-            duration: 0.8, // 더 긴 애니메이션 지속 시간
-            ease: 'Power1.easeInOut', // 이징 함수 추가
+            duration: 2.5, // 더 긴 애니메이션 지속 시간
+            ease: "bounce.out", // 이징 함수 추가
             scrollTrigger: {
                 trigger: '#section4',
-                start: `top bottom+=${index * -100}`, // 50%씩 차이
+                start: `top center+=${index * - 50}`, // 50%씩 차이
                 end: `bottom bottom-=${index * 25}`,
                 toggleActions: 'play none none none',
-                scrub: 0.5,
+                scrub: 1,
                 // markers: true
             },
-            delay: index * 0.5,
-            onComplete: () => {
-                // 텍스트가 사라질 때의 애니메이션
-                gsap.to(text, {
-                    opacity: 0,
-                    duration: 0.8, // 더 긴 애니메이션 지속 시간
-                    ease: 'Power1.easeInOut', // 이징 함수 추가
-                });
-            },
+            // delay: index * 0.5,
+            // onComplete: () => {
+            //     // 텍스트가 사라질 때의 애니메이션
+            //     gsap.to(text, {
+            //         opacity: 0,
+            //         duration: 0.8, // 더 긴 애니메이션 지속 시간
+            //         ease: 'Power1.easeInOut', // 이징 함수 추가
+            //     });
+            // },
         });
 
         gsap.to(text, {
             color: '#624B74',
-            ease: 'Power1.easeInOut', // 이징 함수 추가
+            ease: "bounce.out", // 이징 함수 추가
             scrollTrigger: {
                 trigger: '#section4',
-                start: `top bottom+=${index * -100}`, // 50%씩 차이
+                start: `top center+=${index * -100}`, // 50%씩 차이
                 end: `bottom bottom-=${index * 25}`,
-                scrub: 0.5,
+                scrub: 1,
                 // markers: true
             },
-            onUpdate: () => {
-                const progress = textTween.progress();
-                const opacity = 1 - progress; // 1부터 시작하여 0으로 감소하도록 계산
-                text.style.background = `linear-gradient(to right, rgba(50, 50, 50, ${opacity}) ${progress * 300}%, transparent ${progress * 300}%)`;
-            },
+            // onUpdate: () => {
+            //     const progress = textTween.progress();
+            //     const opacity = 1 - progress; // 1부터 시작하여 0으로 감소하도록 계산
+            //     text.style.background = `linear-gradient(to right, rgba(50, 50, 50, ${opacity}) ${progress * 300}%, transparent ${progress * 300}%)`;
+            // },
         });
     });
 
@@ -223,23 +216,23 @@ window.addEventListener('scroll', () => {
     // section5
     gsap.from(".content__wrap > .right", {
         scrollTrigger: {
-        trigger: "#section5",
-        start: "top center",
-        end: "bottom center",
-        scrub: 1
+            trigger: "#section5",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1
         },
         duration: 0.5,
         scale: 0.5, // 시작 시 크기를 0.5로 설정
         opacity: 0, // 시작 시 투명도를 0으로 설정
         ease: "power1.out",
         delay: 0.5,
-    
+
         // 효과 변경
         scale: 1, // 크기를 1로 변경
     }, "-=0.5");
 
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // GSAP 코드 여기에 추가
         gsap.to(".about__intro", {
             scrollTrigger: {
@@ -255,25 +248,6 @@ window.addEventListener('scroll', () => {
     });
 
     // 
-    // section1
-    gsap.to(".intro__bottom img", {
-        scrollTrigger: {
-            trigger: "#section1",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1
-        },
-        deg: 0,
-        duration: 1,
-        marker: true,
-    }, {
-        // 스크롤이 진행되면서 이미지의 DEG값을 증가시킵니다.
-        onUpdate: function () {
-            gsap.set("#section1 .intro__bottom .svg", {
-                deg: (this.progress % 360)
-            });
-        }
-    });
 
 }
 
