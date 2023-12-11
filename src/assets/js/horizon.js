@@ -60,10 +60,14 @@ export function horizon() {
 
     // 이미지 애니메이션 함수 호출하여 각 이미지에 대한 애니메이션 설정
     createImageAnimation(".horizon.s1 > .container > .right img", scrollTween, "img1", 0, 0, 1.5, 1, "expo.in", "left 50%", "right 70%");
-    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
-    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0, 50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s2 > .container > .right img", scrollTween, "img2", 0,
+        50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s3 > .container > .right img", scrollTween, "img3", 0,
+        50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s4 > .container > .right img", scrollTween, "img4", 0,
+        50, 1.5, 1, "expo.in", "left 90%", "right 100%");
+    createImageAnimation(".horizon.s5 > .container > .right img", scrollTween, "img5", 0,
+        50, 1.5, 1, "expo.in", "left 90%", "right 100%");
 
 
     // progress
