@@ -53,7 +53,7 @@ input,
 select,
 table,
 textarea {
-    font-family: var(--mainfont-bookk), var(--mainfont-nexon), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+    font-family: var(--mainfont-big), var(--mainfont-small), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
 }
 
 // 링크 초기화
@@ -148,6 +148,8 @@ select {
 
 .hidden {
     display: none;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease; /* Smooth transition effect */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 1s ease;
+    /* Smooth transition effect */
 }

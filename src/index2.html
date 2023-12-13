@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEE MYEONGHUN PORTFOLIO</title>
+    <link rel="stylesheet" href="assets/scss/style.scss" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+    <script defer src="./assets/js/canvas.js"></script>
+</head>
+
+<body>
+    <canvas class="p-canvas-webgl" id="canvas-webgl"></canvas>
+    <header id="header">
+        <div class="header__inner">
+            <a href="/">
+                <div class="header__logo">
+                    <img src="assets/img/logo.svg" alt="logosvg" />
+                    <h1>
+                        M.HUN<br />
+                        PORTFOLIO
+                    </h1>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- <div id="loading">
+        <div class='quote split'>
+            Welcome to My Portfolio<br />
+            ... Please wait
+        </div>
+        <div class='clouds'>
+            <div class='clouds-1'></div>
+            <div class='clouds-2'></div>
+            <div class='clouds-3'></div>
+        </div>
+    </div> -->
+
+    <main id="main">
+        <section id="section1">
+            <div class="intro__text">
+                <div class="main__text t1 split">I Am Front-End</div><br />
+                <div class="main__text t2 split">Developer</div>
+                <div class="intro__bottom">
+                    <div class="bar"></div>
+                    <div class="text">
+                        <p>I hope you enjoy
+                            <img src="assets/img/scrolldown.svg" alt="scrolldown">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="parallax__progress">
+                <progress max="100" value="0"></progress>
+            </div>
+            <!-- //parallax__prgress -->
+            <div class="mouse__cursor"></div>
+            <div class="horizon__wrap">
+                <div class='horizon s1'>
+                    <div class="container">
+                        <div class='left'>
+                            <div class="top__wrap">
+                                <div id="bars">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="svg">
+                                    <img id="img1" src="assets/img/hor_logo.svg" alt="logosvg" />
+                                </div>
+                                <div class='top__text'>PHP / TEAMPROJECT / JAVASCRIPT / DEVELOPMENT</div>
+                            </div>
+
+                            <div class='big__title'>
+                                PHP<br />
+                                TEAM PROJECT
+                            </div>
+                            <div class='sub__title h1'>Teamwork has been a positive experience for me
+                            </div>
+                            <div class='desc'>분리의신은 일상 생활 속에서 발생하는 잘못된 분리배출을 알려주고, 간편한 검색을 통해 올바른 배출 방법을 안내하는 웹사이트입니다.
+                                처음 접해본 PHP를 통해 여러 시행착오를 격으면서 많은 경험을 하였고, 사용자의 피드백을 통해 더 나은 서비스를 제공하는 방향으로 개선하고 싶습니다.
+                                프로젝트를 통해 팀원과의 협업의 중요성을 배우는 계기가 되었습니다.</div>
+                            <div class="btn h1">
+                                <a to="/">
+                                    <div class="text">view</div>
+                                    <div class="arrow"></div>
+                                </a>
+                                <a to="/">
+                                    <div class="text">code</div>
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='right'>
+                            <img src="assets/img/recycle01.png" alt="php프로젝트" />
+                        </div>
+                    </div>
+                </div>
+                <div class='horizon s2'>
+                    <div class="container">
+                        <div class='left'>
+                            <div class="top__wrap">
+                                <div id="bars">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="svg">
+                                    <img id="img2" src="assets/img/hor_logo.svg" alt="logosvg" />
+                                </div>
+                                <div class='top__text'>REACT / BLOG / NODEJS /JAVASCRIPT / BACKEND</div>
+                            </div>
+
+                            <div class='big__title'>
+                                REACT<br />
+                                BLOG SITE
+                            </div>
+                            <div class='sub__title h2'>Challenges make me grow</div>
+                            <div class='desc'>리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를 도입하여 스타일을 보다 효과적으로
+                                다루었고, 더
+                                많은 기능을 쉽게 추가할 수 있는 구조를 갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나 기여할 수 있는 환경을
+                                조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해 블로그를 확장하는 데 최적화되어 있습니다.</div>
+                            <div class="btn h2">
+                                <a to="/">
+                                    <div class="text">view</div>
+                                    <div class="arrow"></div>
+                                </a>
+                                <a to="/">
+                                    <div class="text">code</div>
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='right'>
+                            <img id="myImage" src="assets/img/youtube1.png" alt="reactportimage" />
+                        </div>
+                    </div>
+                </div>
+                <div class='horizon s3'>
+                    <div class="container">
+                        <div class='left'>
+                            <div class="top__wrap">
+                                <div id="bars">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="svg">
+                                    <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                                </div>
+                                <div class='top__text'>PHP / TEAMPROJECT / JAVASCRIPT / DEVELOPMENT</div>
+                            </div>
+
+                            <div class='big__title'>
+                                REACT<br />
+                                YOUTUBE SITE
+                            </div>
+                            <div class='sub__title h3'>Experience is more valuable than anything else</div>
+                            <div class='desc'>유튜브 API를 이용하여 제가 좋아하는 다큐사이트를 만들었습니다.당신을 다큐멘터리 세계로 초대합니다.평소 다큐멘터리에 대한 끊임없는
+                                탐구와
+                                흥미로운 여정을 공유합니다.이곳에서는 다양한 주제와 편견 없는 시각으로 선보이는 다큐멘터리들이 당신을 기다리고 있습니다.</div>
+                            <div class="btn h3">
+                                <a to="/">
+                                    <div class="text">view</div>
+                                    <div class="arrow"></div>
+                                </a>
+                                <a to="/">
+                                    <div class="text">code</div>
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='right'>
+                            <img id="img3" src="assets/img/youtube2.png" alt="youtubesiteimage" />
+                        </div>
+                    </div>
+                </div>
+                <div class='horizon s4'>
+                    <div class="container">
+                        <div class='left'>
+                            <div class="top__wrap">
+                                <div id="bars">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="svg">
+                                    <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                                </div>
+                                <div class='top__text'>VUE / USEAPI / JAVASCRIPT / DEVELOPMENT</div>
+                            </div>
+
+                            <div class='big__title'>
+                                VUE<br />
+                                MOVIE SITE
+                            </div>
+                            <div class='sub__title h4'>Do not be afraid of failure</div>
+                            <div class='desc'>MovieKing은 Vue.js의 다양한 기능을 활용하여 영화 정보를 편리하게 찾고 공유할 수 있는 플랫폼을 제공합니다.
+                                최신영화, 인기영화, 개봉영화, 최고평점를 카테고리별로 볼수 있고,
+                                영화 목록을 클릭하면 해당 영화의 상세 정보를 볼 수 있습니다. 상세 정보에는 영화의 장르, 러닝타임, 출연진 등의 정보가 포함됩니다. 또한, 영화의 썸네일을
+                                클릭하면 예고편을 볼 수 있는 링크도 제공됩니다.
+                            </div>
+                            <div class="btn h4">
+                                <a href="https://vue-movieking-site-project2023.netlify.app" target="_blank">
+                                    <div class="text">view</div>
+                                    <div class="arrow"></div>
+                                </a>
+                                <a href="https://github.com/audgns722/vue-movie-porject2023" target="_blank">
+                                    <div class="text">code</div>
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='right'>
+                            <img id="img4" src="assets/img/movie1.png" alt="moviekingimage" />
+                        </div>
+                    </div>
+                </div>
+                <div class='horizon s5'>
+                    <div class="container">
+                        <div class='left'>
+                            <div class="top__wrap">
+                                <div id="bars">
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="svg">
+                                    <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                                </div>
+                                <div class='top__text'>VUE / USEAPI / JAVASCRIPT / DEVELOPMENT</div>
+                            </div>
+
+                            <div class='big__title'>
+                                VUE<br />
+                                MOVIE SITE
+                            </div>
+                            <div class='sub__title h5'>Do not be afraid of failure</div>
+                            <div class='desc'>MOVIEKING CINEMA는 사용자와의 소통이 이루어지는 공간이기도 합니다. 피드백을 받으면서 서비스를 개선하는 과정에서,
+                                사용자들과
+                                함께 성장하고 더 나은 경험을 제공하는 방향으로 나아가고 있습니다. 사용자들과의 소통은 단순히 서비스를 제공하는 것 이상으로, 더 큰 가치를 창출하고
+                                있습니다.
+                            </div>
+                            <div class="btn h5">
+                                <a to="/">
+                                    <div class="text">view</div>
+                                    <div class="arrow"></div>
+                                </a>
+                                <a to="/">
+                                    <div class="text">code</div>
+                                    <div class="arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='right'>
+                            <img id="img5" src="assets/img/movie2.png" alt="portfolioimage" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="slide__text">
+                2023 M.HUN PORTFOLIO
+            </div>
+            <div class="slide__text2">I'm live in the details</div>
+        </section>
+
+        <section id="section4">
+            <div class="section4__wrap">
+                <div class="backgroundimg">
+
+                </div>
+                <div class="text__wrap">
+                    <div class="text">FRONTEND</div>
+                    <div class="text">WEBSITES</div>
+                    <div class="text">WEBSTANDARD</div>
+                    <div class="text">CREATIVE</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section5">
+            <div class="section__wrap">
+                <div class="sections s1">
+                    <div class="content__wrap">
+                        <div class="left">
+                            <div class="scroll__down">
+                                <div class="text">SCROLL DOWN</div>
+                                <div class="svg"></div>
+                            </div>
+                            <div class="text">Want to see<br />
+                                my site?</div>
+                        </div>
+                        <div class="right">
+                            <img src="assets/img/section5.png" alt="section5img">
+                        </div>
+                    </div>
+                </div>
+                <div class="sections s2">
+                    <div class="site__inner">
+                        <div class="top__wrap">
+                            <div class="text">SITE</div>
+                            <div class="underline"></div>
+                            <div id="bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="svg">
+                                <img src="assets/img/hor_logo.svg" alt="logosvg" />
+                            </div>
+                            <div class='top__text'> WEBSTANDARD / JAVASCRIPT / HTML5</div>
+                        </div>
+                        <div class="grid">
+                            <div class="card">
+                                <span class="icon">
+                                </span>
+                                <h4>QUIZ-GAME</h4>
+                                <p>
+                                    자바스크립트를 이용하여 퀴즈를 만들어 봤습니다. 주관식, 객관식, OMR 방식으로 정보처리기능사, 웹디자인기능사 문제를 풀어볼 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <div><a href="/">VIEW</a></div>
+                                    <div><a href="/">CODE</a></div>
+                                </div>
+                                <div class="shine"></div>
+                                <div class="background">
+                                    <div class="tiles">
+                                        <div class="tile tile-1"></div>
+                                        <div class="tile tile-2"></div>
+                                        <div class="tile tile-3"></div>
+                                        <div class="tile tile-4"></div>
+
+                                        <div class="tile tile-5"></div>
+                                        <div class="tile tile-6"></div>
+                                        <div class="tile tile-7"></div>
+                                        <div class="tile tile-8"></div>
+
+                                        <div class="tile tile-9"></div>
+                                        <div class="tile tile-10"></div>
+                                    </div>
+
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span class="icon">
+                                </span>
+                                <h4>QUIZ-GAME</h4>
+                                <p>
+                                    자바스크립트를 이용하여 퀴즈를 만들어 봤습니다. 주관식, 객관식, OMR 방식으로 정보처리기능사, 웹디자인기능사 문제를 풀어볼 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <div><a href="/">VIEW</a></div>
+                                    <div><a href="/">CODE</a></div>
+                                </div>
+                                <div class="shine"></div>
+                                <div class="background">
+                                    <div class="tiles">
+                                        <div class="tile tile-1"></div>
+                                        <div class="tile tile-2"></div>
+                                        <div class="tile tile-3"></div>
+                                        <div class="tile tile-4"></div>
+
+                                        <div class="tile tile-5"></div>
+                                        <div class="tile tile-6"></div>
+                                        <div class="tile tile-7"></div>
+                                        <div class="tile tile-8"></div>
+
+                                        <div class="tile tile-9"></div>
+                                        <div class="tile tile-10"></div>
+                                    </div>
+
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span class="icon">
+                                </span>
+                                <h4>QUIZ-GAME</h4>
+                                <p>
+                                    자바스크립트를 이용하여 퀴즈를 만들어 봤습니다. 주관식, 객관식, OMR 방식으로 정보처리기능사, 웹디자인기능사 문제를 풀어볼 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <div><a href="/">VIEW</a></div>
+                                    <div><a href="/">CODE</a></div>
+                                </div>
+                                <div class="shine"></div>
+                                <div class="background">
+                                    <div class="tiles">
+                                        <div class="tile tile-1"></div>
+                                        <div class="tile tile-2"></div>
+                                        <div class="tile tile-3"></div>
+                                        <div class="tile tile-4"></div>
+
+                                        <div class="tile tile-5"></div>
+                                        <div class="tile tile-6"></div>
+                                        <div class="tile tile-7"></div>
+                                        <div class="tile tile-8"></div>
+
+                                        <div class="tile tile-9"></div>
+                                        <div class="tile tile-10"></div>
+                                    </div>
+
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span class="icon">
+                                </span>
+                                <h4>QUIZ-GAME</h4>
+                                <p>
+                                    자바스크립트를 이용하여 퀴즈를 만들어 봤습니다. 주관식, 객관식, OMR 방식으로 정보처리기능사, 웹디자인기능사 문제를 풀어볼 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <div><a href="/">VIEW</a></div>
+                                    <div><a href="/">CODE</a></div>
+                                </div>
+                                <div class="shine"></div>
+                                <div class="background">
+                                    <div class="tiles">
+                                        <div class="tile tile-1"></div>
+                                        <div class="tile tile-2"></div>
+                                        <div class="tile tile-3"></div>
+                                        <div class="tile tile-4"></div>
+
+                                        <div class="tile tile-5"></div>
+                                        <div class="tile tile-6"></div>
+                                        <div class="tile tile-7"></div>
+                                        <div class="tile tile-8"></div>
+
+                                        <div class="tile tile-9"></div>
+                                        <div class="tile tile-10"></div>
+                                    </div>
+
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <span class="icon">
+                                </span>
+                                <h4>QUIZ-GAME</h4>
+                                <p>
+                                    자바스크립트를 이용하여 퀴즈를 만들어 봤습니다. 주관식, 객관식, OMR 방식으로 정보처리기능사, 웹디자인기능사 문제를 풀어볼 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <div><a href="/">VIEW</a></div>
+                                    <div><a href="/">CODE</a></div>
+                                </div>
+                                <div class="shine"></div>
+                                <div class="background">
+                                    <div class="tiles">
+                                        <div class="tile tile-1"></div>
+                                        <div class="tile tile-2"></div>
+                                        <div class="tile tile-3"></div>
+                                        <div class="tile tile-4"></div>
+
+                                        <div class="tile tile-5"></div>
+                                        <div class="tile tile-6"></div>
+                                        <div class="tile tile-7"></div>
+                                        <div class="tile tile-8"></div>
+
+                                        <div class="tile tile-9"></div>
+                                        <div class="tile tile-10"></div>
+                                    </div>
+
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section6">
+            <div class="about__intro">
+                <div class="background"></div>
+                <div class="text__cont container">
+                    <div class="scroll__down">
+                        <div class="text">SCROLL DOWN</div>
+                        <div class="svg"></div>
+                    </div>
+                    <div class="text">Do You Want To Know<br />
+                        More About Me?</div>
+                </div>
+            </div>
+            <div class="about__me">
+                <div class="backgroundabout"></div>
+                <div class="about__cont">
+                    <div class="top__wrap">
+                        <div class="text">About Me</div>
+                        <div class="underline"></div>
+                        <div class='top__text'>M.Huns Portfolio 2023</div>
+                    </div>
+                    <div class="title">I am a creative
+                        developer</div>
+                    <div class="bottom__wrap">
+                        <div class="profileimg">
+                            <img src="assets/img/profile.png" alt="profile">
+                        </div>
+                        <div class="info__wrap">
+                            <div class="info">
+                                <h1>Info</h1>
+                                <p>> Name<em>이명훈</em></p>
+                                <p>> Email<em>audgns722@gmail.com</em></p>
+                                <p>> Phone<em>01085745734</em></p>
+                                <p>> Kakao<em>audgns722</em></p>
+                                <p>> Email<em>https://github.com/audgns722</em></p>
+                            </div>
+                            <div class="front">
+                                <h1>Front-End</h1>
+                                <p>> Javascript</p>
+                                <p>> ReactJS</p>
+                                <p>> VueJS</p>
+                                <p>> VieJS</p>
+                                <p>> NextJS</p>
+                                <p>> Html5</p>
+                                <p>> Css3</p>
+                            </div>
+                            <div class="back">
+                                <h1>Back-End</h1>
+                                <p>> Php</p>
+                                <p>> NodeJS</p>
+                                <p>> MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__me">
+                <div class="top__text">
+                    <div class="t1">Thank you</div>
+                    <div class="t2">For Watching</div>
+                </div>
+
+                <div class="bottom__cont">
+                    <div class="left">
+                        <div class="title">Comment</div>
+                        <div class="comment__input">
+                            <p class="comment__name">
+                                <input type="text" name="name" placeholder="Write your name">
+                            </p>
+                            <p class="comment__text">
+                                <input name="comment" id="comment" placeholder="Please comment here!"></input>
+                            </p>
+                            <button class="comment__btn">GO</button>
+                        </div>
+                        <div class="comment__result">
+                            <div class="comments">
+                                <p class="text">반갑습니다.</p>
+                                <p class="author">/ MyeongHun</p>
+                            </div>
+                            <div class="comments">
+                                <p class="text">반갑습니다.</p>
+                                <p class="author">/ MyeongHun</p>
+                            </div>
+                            <div class="comments">
+                                <p class="text">반갑습니다.</p>
+                                <p class="author">/ MyeongHun</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">Contact Me</div>
+                        <div id="contactme">
+                            <form class="mailform" id="mailform">
+                                <p class="email">
+                                    <input name="email" type="text" placeholder="Email" />
+                                </p>
+                                <p class="text">
+                                    <textarea name="text" id="comment" placeholder="Please Message here!"></textarea>
+                                </p>
+                                <div class="submit">
+                                    <input type="submit" value="SEND" id="button" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div id="nav__popup">
+            <div class="popup__wrap">
+                <div class="left__wrap">
+                    <ul>
+                        <li></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Project</a></li>
+                        <li><a href="/">Site</a></li>
+                        <li><a href="/">About me</a></li>
+                        <li><a href="/">Contact</a></li>
+                        <li>
+                            <div class="sns"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/youtubemock.png" alt="/">
+                            <p>React-YoutubeProject</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/recyclemock.png" alt="/">
+                            <p>Php-Recycle</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/moviemock.png" alt="/">
+                            <p>Vue-MovieKing</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/portfoliomock.png" alt="/">
+                            <p>React-Portfolio</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/reactportmock.png" alt="/">
+                            <p>React-Portfolio</p>
+                        </div>
+                    </div>
+                    <div class="imgbtn">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination">Myproject</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    translate: ["0%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                }
+            },
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        function grabImage() {
+            const image = document.getElementById("myImage");
+            image.style.position = "absolute";
+            image.style.left = 100;
+            image.style.top = 100;
+        }
+
+        document.addEventListener("mousedown", grabImage);
+
+    </script>
+</body>
+
+</html>

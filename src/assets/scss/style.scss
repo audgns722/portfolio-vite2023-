@@ -1,19 +1,14 @@
 @charset "UTF-8";
 
-// setting
+/* setting */
 @import url(setting/_common.scss);
 @import url(setting/_fonts.scss);
 @import url(setting/_mixin.scss);
 @import url(setting/_reset.scss);
 @import url(setting/_var.scss);
+@import url(setting/_layout.scss);
 
-// section
+/* section */
+
 @import url(section/_header.scss);
 @import url(section/_section1.scss);
-@import url(section/_section2.scss);
-@import url(section/_section3.scss);
-@import url(section/_section4.scss);
-@import url(section/_section5.scss);
-@import url(section/_section6.scss);
-@import url(section/_navpopup.scss);
-@import url(section/_loading.scss);

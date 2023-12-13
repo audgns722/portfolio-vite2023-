@@ -1,36 +1,15 @@
 :root {
-    --mainfont-gmarket: "gmarket";
-    --mainfont-monuR: "Monument Extended";
-    --subfont-vcr: "vcr osd mono";
-    --subfont-ald: 'Aldrich', sans-serif;
-
-    @font-face {
-        font-family: 'Monument Extended';
-        src: url('../../fonts/MonumentExtended-Regular.woff2') format('woff2'),
-            url('../../fonts/MonumentExtended-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
+    --mainfont-small: 'Helvetica Neue', sans-serif;
+    --mainfont-big: 'GT America Trial', sans-serif;
 
     --black: #000;
-    --black100: #1d1d1d;
-    --black200: #4d4d4d;
-    --black300: #7d7d7d;
-    --black400: #9d9d9d;
-    --black500: #e6e6e6;
+    --yellow: #ddff0d;
 
     --white: #fff;
-    --white100: #dbdbdb;
-    --white200: #c4c4c4;
-    --white300: #bbbbbb;
-    --white400: #aaaaaa;
-    --white500: #a7a7a7;
+
 
     // 폰트 셋팅
-    font-family: var(--mainfont-gmaket),
-    var(--mainfont-monuR),
-    var(--subfont-vcr);
+    font-family: var(--mainfont-big)var(--mainfont-smaill);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
