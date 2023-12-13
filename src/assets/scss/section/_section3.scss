@@ -1,0 +1,90 @@
+#section3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .backgroud__cont {
+        text-align: center;
+        line-height: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: var(--mainfont-big);
+        font-weight: 700;
+        font-size: 5.2vw;
+        letter-spacing: -5px;
+        text-transform: uppercase;
+    }
+
+    .project__inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .project__wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 80%;
+        width: 9000px;
+    }
+    .project__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 500px;
+        height: 70vh;
+        background-color: #ccc;
+        margin-right: 20px;
+        padding: 50px 30px;
+        position: relative;
+        color: var(--white);
+        a{
+            display: flex;
+            justify-content: center;
+            img {
+                width: 50%;
+                transition: all 0.3s;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: var(--mainKor-font);
+            font-weight: 700;
+            margin: 1vw 0;
+            border-bottom: 5px solid #21313b;
+            padding: 0 15px;
+            line-height: 1;
+        }
+        .desc {
+            font-family: var(--mainKor-font);
+            font-size: 1.2rem;
+            margin: 15px 0;
+            text-align: justify;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--subBg500);
+            width: 100%;
+            height: 50px;
+            transition: all 0.3s;
+            &:hover {
+                background-color: var(--subBg500);
+                color: var(--mainFont-color);
+            }
+        }
+    }
+    
+}

@@ -1,7 +1,7 @@
 #section1 {
     width: 100%;
-    height: 100vh;
-    background: #e3e0dd;
+    
+    backgroud: #e3e0dd;
 
     .marquee__wrap {
 
@@ -38,10 +38,10 @@
 
     .big__text {
         width: 100%;
-        height: 60vh;
-
+        height: 55vh;
         display: flex;
         justify-content: center;
+        margin-bottom: 20vh;
 
         div {
             margin-top: 3vh;
