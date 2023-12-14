@@ -1,0 +1,210 @@
+#section7 {
+    width: 100%;
+    height: 100vh;
+
+    .contact__me {
+
+        .top__text {
+            font-family: var(--mainfont-big);
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.1;
+            padding-top: 15vh;
+            font-weight: 700;
+
+            .t1 {
+                font-size: 6.25vw;
+                color: var(--black);
+            }
+
+            .t2 {
+                font-size: 6.25vw;
+            }
+        }
+
+        .bottom__cont {
+            max-width: 1782px;
+            margin: 0 auto;
+            width: 95%;
+            margin-top: 9.11vw;
+            display: flex;
+            gap: 2vw;
+            margin-bottom: 2vw;
+
+            @media (max-width:800px) {
+                flex-direction: column;
+                gap: 5vh;
+                margin-top: 5vh;
+
+            }
+
+            .left {
+                width: 60%;
+
+                @media (max-width:800px) {
+                    width: 100%;
+                }
+
+                .title {
+                    font-family: var(--mainfont-small);
+                    text-transform: uppercase;
+                    font-size: 3.12vw;
+                }
+
+                .comment__input {
+                    margin-top: 2.08vw;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 45px;
+                    gap: 1vw;
+                    font-family: var(--mainfont-gmarket);
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                    .comment__name {
+                        width: 40%;
+                        height: 100%;
+
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid var(--white);
+                            background-color: rgba(13, 55, 32, 0.9);
+
+                            padding-left: 10px;
+                            color: var(--white);
+                        }
+                    }
+
+                    .comment__text {
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid var(--white);
+                            background-color: rgba(13, 55, 32, 0.9);
+
+                            padding-left: 10px;
+                            color: var(--white);
+                        }
+                    }
+
+                    .comment__btn {
+                        width: 45px;
+                        height: 45px;
+                        color: var(--white);
+                        background-color: rgba(13, 55, 32, 0.9);
+                        border: 1px solid var(--white);
+                        cursor: pointer;
+                    }
+                }
+
+                .comment__result {
+                    width: 100%;
+                    margin-top: 2.08vw;
+
+                    .comments {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        border-bottom: 1px solid #fff;
+                        height: 30px;
+
+                        .text {
+                            font-family: var(--mainfont-gmarket);
+                            font-size: 1rem;
+                            font-weight: 300;
+                        }
+
+                        .author {
+                            font-family: var(--subfont-vcr);
+                            font-size: 12px;
+                            color: #48456C;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
+
+                @media (max-width:800px) {
+                    width: 100%;
+                }
+
+                .title {
+                    font-family: var(--mainfont-small);
+                    text-transform: uppercase;
+                    font-size: 3.12vw;
+                }
+
+                #contactme {
+                    width: 100%;
+                    margin-top: 2.08vw;
+
+                    @media (max-width:800px) {
+                        max-width: 100%;
+                    }
+
+                    .mailform {
+                        font-family: var(--mainfont-gmarket);
+                        font-size: 1rem;
+                        color: var(--white);
+
+                        .email {
+                            input {
+                                height: 45px;
+                                width: 100%;
+                                border: 1px solid var(--white);
+                                background-color: rgba(13, 55, 32, 0.9);
+
+                                padding-left: 10px;
+                                color: var(--white);
+                            }
+                        }
+
+                        .text {
+                            textarea {
+                                margin-top: 1.35vw;
+                                resize: none;
+                                height: 11.1vw;
+                                width: 100%;
+                                border: 1px solid var(--white);
+                                background-color: rgba(13, 55, 32, 0.9);
+
+                                padding-left: 10px;
+                                padding-top: 10px;
+                                color: var(--white);
+
+                                @media (max-width:800px) {
+                                    height: 10vh;
+                                }
+                            }
+                        }
+
+                        .submit {
+                            input {
+                                cursor: pointer;
+                                width: 100%;
+                                border: 1px solid var(--white);
+                                background-color: rgba(13, 55, 32, 0.9);
+
+                                color: var(--white);
+                                height: 45px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
