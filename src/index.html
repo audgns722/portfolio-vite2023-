@@ -164,8 +164,8 @@
                         <p>INTRODUCING MY WEBSITE</p>
                     </div>
                     <div class="site__wrap">
-                        <div class="site" onmouseover="showImage(this)" onmouseout="hideImage(this)">
-                            <div class="left">
+                        <div class="site">
+                            <div class=" left">
                                 <div>WEBSTANDARD</div>
                                 <span>WEBSTANDARD</span>
                                 <span>JAVASCRIPT</span>
@@ -178,7 +178,7 @@
                             </div>
                             <img class="site__image" src="assets/img/recycle01.png" alt="/">
                         </div>
-                        <div class="site" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+                        <div class="site">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span>WEBSTANDARD</span>
@@ -192,7 +192,7 @@
                             </div>
                             <img class="site__image" src="assets/img/youtube2.png" alt="/">
                         </div>
-                        <div class="site" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+                        <div class="site">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span>WEBSTANDARD</span>
@@ -206,7 +206,7 @@
                             </div>
                             <img class="site__image" src="assets/img/youtube1.png" alt="/">
                         </div>
-                        <div class="site" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+                        <div class="site">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span>WEBSTANDARD</span>
@@ -325,7 +325,7 @@
                                 <input type="text" name="name" placeholder="Write your name">
                             </p>
                             <p class="comment__text">
-                                <input name="comment" id="comment" placeholder="Please comment here!"></input>
+                                <input type="text" name="comment" id="comment" placeholder="Please comment here!" />
                             </p>
                             <button class="comment__btn">GO</button>
                         </div>
@@ -366,28 +366,28 @@
     <script type="module" src="assets/js/main.js"></script>
     <script src="./assets/js/scrollingMarquee.js"></script>
     <script>
-        const siteImages = document.querySelectorAll('.site__image');
+        // const siteImages = document.querySelectorAll('.site__image');
 
-        document.addEventListener('mousemove', (e) => {
-            siteImages.forEach((image) => {
-                const rect = image.parentElement.getBoundingClientRect();
-                const mouseX = e.clientX - rect.left;
-                const mouseY = e.clientY - rect.top;
+        // document.addEventListener('mousemove', (e) => {
+        //     siteImages.forEach((image) => {
+        //         const rect = image.parentElement.getBoundingClientRect();
+        //         const mouseX = e.clientX - rect.left;
+        //         const mouseY = e.clientY - rect.top;
 
-                image.style.left = `${mouseX}px`;
-                image.style.top = `${mouseY}px`;
-            });
-        });
+        //         image.style.left = `${mouseX}px`;
+        //         image.style.top = `${mouseY}px`;
+        //     });
+        // });
 
-        function showImage(site) {
-            const img = site.querySelector('.site__image');
-            img.style.left = '50%';
-        }
+        // function showImage(site) {
+        //     const img = site.querySelector('.site__image');
+        //     img.style.left = '50%';
+        // }
 
-        function hideImage(site) {
-            const img = site.querySelector('.site__image');
-            img.style.left = '-100%';
-        }
+        // function hideImage(site) {
+        //     const img = site.querySelector('.site__image');
+        //     img.style.left = '-100%';
+        // }
     </script>
 </body>
 

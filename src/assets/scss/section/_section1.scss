@@ -1,11 +1,10 @@
 #section1 {
     width: 100%;
 
-    backgroud: #e3e0dd;
-
     .marquee__wrap {
 
         .marquee {
+            opacity: 0;
             display: flex;
             overflow: hidden;
             border-bottom: 1px solid var(--black);
@@ -25,6 +24,10 @@
 
         .marquee.reverse {
             flex-direction: row-reverse;
+        }
+
+        .marquee1 {
+            border-top: 1px solid var(--black);
         }
 
         .marquee2 {
