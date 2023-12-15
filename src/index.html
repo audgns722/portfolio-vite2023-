@@ -11,20 +11,16 @@
 
 <body>
     <header id="header">
-        <div class="header__inner">
-            <a href="/">
-                <div class="header__logo">
-                    <h1>M.HUN`S</h1>
-                    <img src="assets/img/logo.png" alt="logosvg" />
-                </div>
-            </a>
-            <div class="header__nav">
-                <ul>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
+        <div class="header__logo">
+            <h1>M.HUN`S</h1>
+            <img src="assets/img/logo.png" alt="logosvg" />
+        </div>
+        <div class="header__nav">
+            <ul>
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
         </div>
     </header>
 
@@ -32,34 +28,38 @@
         <section id="section1">
             <div class="marquee__wrap">
                 <div class="marquee marquee1">
-                    <p class="marquee-text">HELLOW MY PORTFOLIO</p>
-                    <p class="marquee-text">HELLOW MY PORTFOLIO</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+
                 </div>
                 <div class="marquee marquee2">
-                    <p class="marquee-text">HELLOW MY PORTFOLIO</p>
-                    <p class="marquee-text">HELLOW MY PORTFOLIO</p>
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
                 </div>
             </div>
-            <div class="big__text">
-                <div>
-                    <img src="assets/img/portfolio1.svg" alt="">
-                    <span></span>
+            <div class="text">
+                portfolio
+                <span></span>
+            </div>
+            <div class="marquee__wrap">
+                <div class="marquee marquee3">
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                </div>
+                <div class="marquee marquee4">
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
                 </div>
             </div>
-        </section>
-
-        <section id="section2">
-            <div class="intro__wrap">
-                <div class="intro__about">
-                    <h1 class="title">ABOUT</h1>
-                    <p class="desc">
-                        안녕하세요. 프론트앤드 개발자를 꿈꾸는 이명훈입니다. 어릴 때부터 컴퓨터에 관심이 많았고, 웹
-                        개발에 매력을 느껴 프론트엔드 개발자를 꿈꾸게 되었습니다. 저는 항상 새로운 기술을 배우고
-                        실력을 향상시키기 위해 노력하고 있습니다. 또한, 팀원들과 협업하는 능력을 키우기 위해
-                        노력하고 있습니다. 앞으로도 열심히 노력해서 뛰어난 프론트엔드 개발자가
-                        되겠습니다.감사합니다.
-                    </p>
-                </div>
+            <div class="desc">
+                <h1>ABOUT</h1>
+                <p>
+                    안녕하세요. 프론트앤드 개발자를 꿈꾸는 이명훈입니다.<br />
+                    어릴 때부터 컴퓨터에 관심이 많았고, 웹 개발에 매력을 느껴 프론트엔드 개발자를 꿈꾸게 되었습니다.<br />
+                    저는 항상 새로운 기술을 배우고 실력을 향상시키기 위해 노력하고 있습니다.<br />
+                    또한, 팀원들과 협업하는 능력을 키우기 위해 노력하고 있습니다. 앞으로도 열심히 노력해서 뛰어난 프론트엔드 개발자가
+                    되겠습니다.감사합니다.
+                </p>
             </div>
         </section>
 
@@ -363,31 +363,18 @@
                 </div>
         </section>
     </main>
+
+    <footer id="footer">
+        <h5>LEOLEO©2023 developed by plutot.cool</h5>
+        <ul>
+            <li><a href="#">email</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">github</a></li>
+        </ul>
+    </footer>
     <script type="module" src="assets/js/main.js"></script>
     <script src="./assets/js/scrollingMarquee.js"></script>
     <script>
-        // const siteImages = document.querySelectorAll('.site__image');
-
-        // document.addEventListener('mousemove', (e) => {
-        //     siteImages.forEach((image) => {
-        //         const rect = image.parentElement.getBoundingClientRect();
-        //         const mouseX = e.clientX - rect.left;
-        //         const mouseY = e.clientY - rect.top;
-
-        //         image.style.left = `${mouseX}px`;
-        //         image.style.top = `${mouseY}px`;
-        //     });
-        // });
-
-        // function showImage(site) {
-        //     const img = site.querySelector('.site__image');
-        //     img.style.left = '50%';
-        // }
-
-        // function hideImage(site) {
-        //     const img = site.querySelector('.site__image');
-        //     img.style.left = '-100%';
-        // }
     </script>
 </body>
 
