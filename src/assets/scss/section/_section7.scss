@@ -1,6 +1,5 @@
 #section7 {
     width: 100%;
-    height: 100vh;
 
     .contact__me {
 
@@ -9,7 +8,7 @@
             text-transform: uppercase;
             text-align: center;
             line-height: 1.1;
-            padding-top: 15vh;
+            padding-top: 10vh;
             font-weight: 700;
 
             .t1 {
@@ -26,7 +25,8 @@
             max-width: 1782px;
             margin: 0 auto;
             width: 95%;
-            margin-top: 9.11vw;
+            margin-top: 9vw;
+            margin-bottom: 3vh;
             display: flex;
             gap: 2vw;
             margin-bottom: 2vw;
@@ -47,6 +47,7 @@
 
                 .title {
                     font-family: var(--mainfont-small);
+                    font-weight: 700;
                     text-transform: uppercase;
                     font-size: 3.12vw;
                 }
@@ -57,7 +58,7 @@
                     justify-content: space-between;
                     height: 45px;
                     gap: 1vw;
-                    font-family: var(--mainfont-gmarket);
+                    font-family: var(--mainfont-small);
                     font-size: 1rem;
                     font-weight: 500;
 
@@ -68,7 +69,7 @@
                         input {
                             height: 100%;
                             width: 100%;
-                            border: 1px solid var(--white);
+
                             background-color: rgba(13, 55, 32, 0.9);
 
                             padding-left: 10px;
@@ -84,7 +85,7 @@
                         input {
                             width: 100%;
                             height: 100%;
-                            border: 1px solid var(--white);
+
                             background-color: rgba(13, 55, 32, 0.9);
 
                             padding-left: 10px;
@@ -97,7 +98,7 @@
                         height: 45px;
                         color: var(--white);
                         background-color: rgba(13, 55, 32, 0.9);
-                        border: 1px solid var(--white);
+
                         cursor: pointer;
                     }
                 }
@@ -111,17 +112,17 @@
                         justify-content: space-between;
                         align-items: center;
                         width: 100%;
-                        border-bottom: 1px solid #fff;
+
                         height: 30px;
 
                         .text {
-                            font-family: var(--mainfont-gmarket);
+                            font-family: var(--mainfont-small);
                             font-size: 1rem;
                             font-weight: 300;
                         }
 
                         .author {
-                            font-family: var(--subfont-vcr);
+                            font-family: 'Arial', sans-serif;
                             font-size: 12px;
                             color: #48456C;
                         }
@@ -142,6 +143,7 @@
 
                 .title {
                     font-family: var(--mainfont-small);
+                    font-weight: 700;
                     text-transform: uppercase;
                     font-size: 3.12vw;
                 }
@@ -155,7 +157,7 @@
                     }
 
                     .mailform {
-                        font-family: var(--mainfont-gmarket);
+                        font-family: 'Arial', sans-serif;
                         font-size: 1rem;
                         color: var(--white);
 
@@ -163,7 +165,7 @@
                             input {
                                 height: 45px;
                                 width: 100%;
-                                border: 1px solid var(--white);
+
                                 background-color: rgba(13, 55, 32, 0.9);
 
                                 padding-left: 10px;
@@ -177,7 +179,7 @@
                                 resize: none;
                                 height: 11.1vw;
                                 width: 100%;
-                                border: 1px solid var(--white);
+
                                 background-color: rgba(13, 55, 32, 0.9);
 
                                 padding-left: 10px;
@@ -194,7 +196,7 @@
                             input {
                                 cursor: pointer;
                                 width: 100%;
-                                border: 1px solid var(--white);
+
                                 background-color: rgba(13, 55, 32, 0.9);
 
                                 color: var(--white);

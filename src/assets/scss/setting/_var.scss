@@ -1,19 +1,20 @@
 :root {
-    --mainfont-small: 'Helvetica Neue', sans-serif;
-    --mainfont-big: 'GT America Trial', sans-serif;
+    --mainfont-small: 'VitroCore';
+    --mainfont-small2: 'BMDoHyeon';
+    --mainfont-big: 'League Gothic';
+    --korfont: 'KotraGothic';
+    --engfont: 'Noto Sans', sans-serif;
 
     --black: #000;
     --yellow: #ddff0d;
 
     --white: #fff;
 
-
     // 폰트 셋팅
-    font-family: var(--mainfont-big)var(--mainfont-small);
+    font-family: var(--mainfont-big) var(--mainfont-small) var(--korfont);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-
 
     // 폰트 최적화
     font-synthesis: none;
