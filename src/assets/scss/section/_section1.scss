@@ -3,8 +3,9 @@
     height: 100vh;
 
     .marquee__wrap {
+        opacity: 0;
+        transform: scale3d(0.7);
         .marquee {
-            opacity: 1;
             display: flex;
             overflow: hidden;
             border-bottom: 1px solid var(--black);

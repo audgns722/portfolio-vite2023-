@@ -20,16 +20,16 @@ export function section1() {
     // 첫 번째 자식에 대한 애니메이션
     gsap.fromTo(
         '.main__text>div:first-child',
-        { ...initialAnimation },
-        { ...commonAnimationProps, onComplete: animateSecondChild },
+        {...initialAnimation},
+        {...commonAnimationProps, onComplete: animateSecondChild},
     );
 
     // 두 번째 자식에 대한 애니메이션
     function animateSecondChild() {
         gsap.fromTo(
             '.main__text>div:nth-child(2)',
-            { ...initialAnimation },
-            { ...commonAnimationProps, delay: 0, onComplete: animateLastChild },
+            {...initialAnimation},
+            {...commonAnimationProps, delay: 0, onComplete: animateLastChild},
         );
     }
 
@@ -41,6 +41,14 @@ export function section1() {
             duration: 0.3,
             delay: 0.5,
             rotate: '-15deg',
+        });
+
+        gsap.to('.marquee__wrap', {
+            y: '0%', // 목표 위치
+            opacity: 1, // 목표 투명도
+            duration: 1,
+            ease: 'power2.out',
+            scale3d: 1,
         });
     }
 }

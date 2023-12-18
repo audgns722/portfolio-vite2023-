@@ -10,12 +10,14 @@
             font-weight: 900;
         }
 
-        p {
-            font-family: var(--korfont);
-            font-size: 1.3rem;
-            word-break: keep-all;
-            font-weight: 300;
-            line-height: 1.4;
+        .split {
+            div {
+                font-family: var(--korfont);
+                font-size: 1.3rem;
+                word-break: keep-all;
+                font-weight: 300;
+                line-height: 1.4;
+            }
         }
     }
 }
