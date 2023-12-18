@@ -15,7 +15,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: var(--mainfont-big);
+        font-family: var(--mainfont-big);
         font-weight: 700;
         font-size: 5.2vw;
         text-transform: uppercase;
@@ -47,15 +47,19 @@
         &:nth-child(1) {
             background-color: #e8ffce;
         }
+
         &:nth-child(2) {
             background-color: #acfadf;
         }
+
         &:nth-child(3) {
             background-color: #94add7;
         }
+
         &:nth-child(4) {
             background-color: #8981c2;
         }
+
         &:nth-child(5) {
             background-color: #82a0d8;
         }
@@ -68,18 +72,23 @@
             background-position: center center;
             background-repeat: no-repeat;
         }
+
         &:nth-child(1) .img {
             background-image: url(../../img/recyclemock.png);
         }
+
         &:nth-child(2) .img {
             background-image: url(../../img/reactportmock.png);
         }
+
         &:nth-child(3) .img {
             background-image: url(../../img/youtubemock.png);
         }
+
         &:nth-child(4) .img {
             background-image: url(../../img/moviemock.png);
         }
+
         &:nth-child(5) .img {
             background-image: url(../../img/youtubemock.png);
         }

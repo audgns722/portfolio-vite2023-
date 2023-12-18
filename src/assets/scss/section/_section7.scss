@@ -1,5 +1,32 @@
 #section7 {
     width: 100%;
+    height: 100vh;
+    padding-bottom: 7vh;
+    position: relative;
+
+    &::before {
+        background-color: hsl(0, 0%, 18%);
+        background-size: 3px 3px;
+        background-image:
+            linear-gradient(0deg, hsla(0, 0%, 0%, 0) 0, hsla(0, 0%, 10%, 1) 3px),
+            linear-gradient(90deg, hsla(0, 0%, 0%, 0) 0, hsla(0, 0%, 10%, 1) 5px);
+        z-index: -1;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        background: linear-gradient(90deg, rgba(26, 26, 26, 0.9150035014005602) 0%, rgba(26, 26, 26, 1) 50%, rgba(26, 26, 26, 0.8645833333333334) 100%);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        position: absolute;
+    }
 
     .contact__me {
 
@@ -11,17 +38,16 @@
             padding-top: 10vh;
             font-weight: 700;
 
-            .t1 {
-                font-size: 6.25vw;
-                color: var(--black);
-            }
-
+            .t1,
             .t2 {
-                font-size: 6.25vw;
+                font-size: 5.25vw;
+                color: var(--white);
+                line-height: 1;
             }
         }
 
         .bottom__cont {
+            color: var(--white);
             max-width: 1782px;
             margin: 0 auto;
             width: 95%;
@@ -46,8 +72,8 @@
                 }
 
                 .title {
-                    font-family: var(--mainfont-small);
-                    font-weight: 700;
+                    font-family: var(--engfont);
+                    font-weight: 500;
                     text-transform: uppercase;
                     font-size: 3.12vw;
                 }
@@ -70,7 +96,7 @@
                             height: 100%;
                             width: 100%;
 
-                            background-color: rgba(13, 55, 32, 0.9);
+                            background-color: rgb(35 35 35 / 90%);
 
                             padding-left: 10px;
                             color: var(--white);
@@ -86,7 +112,7 @@
                             width: 100%;
                             height: 100%;
 
-                            background-color: rgba(13, 55, 32, 0.9);
+                            background-color: rgb(35 35 35 / 90%);
 
                             padding-left: 10px;
                             color: var(--white);
@@ -97,7 +123,7 @@
                         width: 45px;
                         height: 45px;
                         color: var(--white);
-                        background-color: rgba(13, 55, 32, 0.9);
+                        background-color: rgb(35 35 35 / 90%);
 
                         cursor: pointer;
                     }
@@ -112,18 +138,19 @@
                         justify-content: space-between;
                         align-items: center;
                         width: 100%;
-
-                        height: 30px;
+                        height: 50px;
 
                         .text {
-                            font-family: var(--mainfont-small);
+                            font-family: var(--korfont);
                             font-size: 1rem;
                             font-weight: 300;
                         }
 
                         .author {
-                            font-family: 'Arial', sans-serif;
-                            font-size: 12px;
+                            font-family: var(--mainfont-small2);
+                            letter-spacing: 3px;
+                            font-weight: 500;
+                            font-size: 0.9rem;
                             color: #48456C;
                         }
                     }
@@ -142,8 +169,8 @@
                 }
 
                 .title {
-                    font-family: var(--mainfont-small);
-                    font-weight: 700;
+                    font-family: var(--engfont);
+                    font-weight: 500;
                     text-transform: uppercase;
                     font-size: 3.12vw;
                 }
@@ -166,7 +193,7 @@
                                 height: 45px;
                                 width: 100%;
 
-                                background-color: rgba(13, 55, 32, 0.9);
+                                background-color: rgb(35 35 35 / 90%);
 
                                 padding-left: 10px;
                                 color: var(--white);
@@ -180,7 +207,7 @@
                                 height: 11.1vw;
                                 width: 100%;
 
-                                background-color: rgba(13, 55, 32, 0.9);
+                                background-color: rgb(35 35 35 / 90%);
 
                                 padding-left: 10px;
                                 padding-top: 10px;
@@ -197,7 +224,7 @@
                                 cursor: pointer;
                                 width: 100%;
 
-                                background-color: rgba(13, 55, 32, 0.9);
+                                background-color: rgb(35 35 35 / 90%);
 
                                 color: var(--white);
                                 height: 45px;

@@ -11,9 +11,9 @@ export function section5() {
     // 이미지 요소에 대한 애니메이션 설정
     imageElements.forEach((imageElement, index) => {
         gsap.to(imageElement, {
-            opacity: 0, // 초기 투명도 0으로 설정하여 페이드인 효과
-            scale: 0.5, // 초기 크기 0.5로 설정하여 축소 효과
-            ease: 'power3.inOut', // 휠 액션에 따라 자연스럽게 이동하기 위한 easing 설정
+            x: -500, // 초기 투명도 0으로 설정하여 페이드인 효과
+            scale: 1.2, // 초기 크기 0.5로 설정하여 축소 효과
+            ease: 'epxo in', // 휠 액션에 따라 자연스럽게 이동하기 위한 easing 설정
             duration: 1,
             scrollTrigger: {
                 trigger: '#section5', // 트리거 요소
@@ -25,3 +25,5 @@ export function section5() {
         });
     });
 }
+
+// https://codepen.io/Juxtopposed/pen/mdQaNbG

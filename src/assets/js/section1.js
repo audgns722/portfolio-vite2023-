@@ -20,24 +20,26 @@ export function section1() {
     // 첫 번째 자식에 대한 애니메이션
     gsap.fromTo(
         '.main__text>div:first-child',
-        {...initialAnimation},
-        {...commonAnimationProps, onComplete: animateSecondChild},
+        { ...initialAnimation },
+        { ...commonAnimationProps, onComplete: animateSecondChild },
     );
 
     // 두 번째 자식에 대한 애니메이션
     function animateSecondChild() {
         gsap.fromTo(
             '.main__text>div:nth-child(2)',
-            {...initialAnimation},
-            {...commonAnimationProps, delay: 0, onComplete: animateLastChild},
+            { ...initialAnimation },
+            { ...commonAnimationProps, delay: 0, onComplete: animateLastChild },
         );
     }
 
     // 마지막 자식에 대한 애니메이션
     function animateLastChild() {
         gsap.to('.main__text>span', {
+            scale: 1,
             opacity: 1,
-            delay: 1,
+            duration: 0.3,
+            delay: 0.5,
             rotate: '-15deg',
         });
     }
