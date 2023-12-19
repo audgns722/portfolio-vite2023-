@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export function total() {
+    gsap.registerPlugin(ScrollTrigger);
+
     // 배경색 효과
     gsap.utils.toArray('.changeBg').forEach(item => {
         let color = item.getAttribute('data-bgcolor');
@@ -20,6 +22,7 @@ export function total() {
                     backgroundColor: color,
                     duration: 1.4,
                 }),
+            markers: true, // 여기에 markers: true 추가
         });
     });
 
@@ -36,7 +39,6 @@ export function total() {
                 start: 'top 25%',
                 end: 'bottom bottom',
                 scrub: true,
-                markers: true,
             },
         });
     });

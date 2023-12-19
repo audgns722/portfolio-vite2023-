@@ -1,7 +1,6 @@
 #section7 {
     width: 100%;
     height: 100vh;
-    padding: 80px 0;
     position: relative;
 
     .changeBg {
@@ -12,7 +11,7 @@
     }
 
     .contact__me {
-
+        height: 100%;
         .top__text {
             font-family: var(--mainfont-big);
             text-transform: uppercase;
@@ -33,10 +32,9 @@
             max-width: 1782px;
             margin: 0 auto;
             width: 95%;
-            margin-top: 9vw;
+            margin-top: 4vw;
             display: flex;
             gap: 2vw;
-
 
             @media (max-width: 800px) {
                 flex-direction: column;

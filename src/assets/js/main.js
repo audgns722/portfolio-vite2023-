@@ -6,6 +6,8 @@ import {section2} from './section2.js';
 import {section5} from './section5.js';
 import {marquee} from './marquee.js';
 import {total} from './total.js';
+import {section6} from './section6.js';
+import {canvas} from './canvas.js';
 
 window.addEventListener('load', function () {
     smooth();
@@ -15,6 +17,8 @@ window.addEventListener('load', function () {
     section4();
     section5();
     total();
+    canvas();
+    section6();
 });
 window.addEventListener('load', function () {
     for (let i = 0; i < 2; i++) {

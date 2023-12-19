@@ -1,9 +1,6 @@
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export function section1() {
-    gsap.registerPlugin(ScrollTrigger);
-
     const initialAnimation = {
         scaleY: 10,
         transformOrigin: '50% 100%',
@@ -31,6 +28,11 @@ export function section1() {
             {...initialAnimation},
             {...commonAnimationProps, delay: 0, onComplete: animateLastChild},
         );
+    }
+
+    function canvas() {
+        // canvas
+        gsap.fromTo('#webgl-canvas', {x: -50, y: -50, opacity: 0, scale: 0}, {x: 0, y: 0, opacity: 1, scale: 1});
     }
 
     // 마지막 자식에 대한 애니메이션

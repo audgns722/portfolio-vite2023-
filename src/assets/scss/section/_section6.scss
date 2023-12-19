@@ -1,6 +1,8 @@
 #section6 {
     width: 100%;
     height: 100vh;
+    position: relative;
+
     .changeBg {
         position: absolute;
         width: 100%;
@@ -13,10 +15,9 @@
         height: 100%;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-end;
 
         .left__wrap {
-            margin-left: 20vw;
             text-align: right;
 
             h1 {
@@ -106,6 +107,7 @@
 
             .profileimg {
                 margin-left: 10px;
+                opacity: 0;
 
                 img {
                 }
