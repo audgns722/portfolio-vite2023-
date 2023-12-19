@@ -21,6 +21,7 @@
                 h1 {
                     margin-bottom: 1vw;
                     font-family: var(--mainfont-small);
+                    font-size: 30px;
                     color: #ff663e;
                     font-weight: 900;
                 }
@@ -36,10 +37,22 @@
                 }
             }
 
-            .site__wrap {
-                margin-top: 50px;
+            .slider {
+                position: relative;
 
-                .site {
+                .slider__image {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: fixed;
+                    object-fit: cover;
+                    height: 250px;
+                    width: 350px;
+                    border-radius: 20px;
+                    pointer-events: none;
+                    will-change: transform;
+                }
+
+                .slide {
                     width: 100%;
                     border-bottom: 1px solid #59806d;
                     display: flex;
@@ -48,39 +61,10 @@
                     position: relative;
                     cursor: pointer;
 
-                    .preview-container {
-                        position: fixed;
-                        opacity: 0;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: -1;
+                    .slide__image {
                         opacity: 0;
                         visibility: hidden;
-
-                        transition:
-                            opacity 0.4s,
-                            visibility 0.4s;
-
-                        .image-container {
-                            width: 300px;
-                            height: 400px;
-                            overflow: hidden;
-                            opacity: 1;
-                            transition: transform cubic-bezier(0.2, 1, 0.3, 1) 0.8s;
-                            position: relative;
-                            z-index: 3;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                /* 이미지가 비율 유지하면서 부모 요소에 꽉 차도록 설정 */
-                                display: block;
-                                /* 이미지가 inline 속성을 가지지 않도록 설정 */
-                            }
-                        }
+                        display: none;
                     }
 
                     .left {

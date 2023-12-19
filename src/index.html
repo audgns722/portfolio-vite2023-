@@ -72,6 +72,7 @@
         </section>
 
         <section id="section3">
+            <div class="changeBg" data-bgcolor="rgb(0,0,0,0)"></div>
             <div class="backgroud__cont">Introducing<br />my project</div>
             <div class="project__inner">
                 <div class="project__wrap">
@@ -149,6 +150,7 @@
                 </div>
             </div>
         </section>
+
         <div class="scroll__down">
             <h1>Want to see my site?</h1>
             <span>Scroll Down<em></em></span>
@@ -163,13 +165,10 @@
                         <h1>SITE</h1>
                         <p>INTRODUCING MY WEBSITE</p>
                     </div>
-                    <div class="site__wrap">
-                        <div class="site noline">
-                            <div class="preview-container">
-                                <div class="image-container">
-                                    <img src="assets/img/vuemovie.png" alt="" />
-                                </div>
-                            </div>
+                    <div class="slider">
+                        <img class="slider__image" data-src="" alt="" />
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/protimg2.png" alt="">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span class="s1">WEBSTANDARD</span>
@@ -182,12 +181,8 @@
                             </div>
                             <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
                         </div>
-                        <div class="site noline">
-                            <div class="preview-container">
-                                <div class="image-container">
-                                    <img src="assets/img/reactyoutube.png" alt="" />
-                                </div>
-                            </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/reactyoutube.png" alt="">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span class="s1">WEBSTANDARD</span>
@@ -200,12 +195,8 @@
                             </div>
                             <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
                         </div>
-                        <div class="site noline">
-                            <div class="preview-container">
-                                <div class="image-container">
-                                    <img src="assets/img/testimg.png" alt="" />
-                                </div>
-                            </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/testimg.png" alt="">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span class="s1">WEBSTANDARD</span>
@@ -218,12 +209,8 @@
                             </div>
                             <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
                         </div>
-                        <div class="site noline">
-                            <div class="preview-container">
-                                <div class="image-container">
-                                    <img src="assets/img/vuemovie.png" alt="" />
-                                </div>
-                            </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/vuemovie.png" alt="">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span class="s1">WEBSTANDARD</span>
@@ -236,12 +223,8 @@
                             </div>
                             <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
                         </div>
-                        <div class="site noline">
-                            <div class="preview-container">
-                                <div class="image-container">
-                                    <img src="assets/img/recyclemockup.png" alt="" />
-                                </div>
-                            </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/portimg1.png" alt="">
                             <div class="left">
                                 <div>WEBSTANDARD</div>
                                 <span class="s1">WEBSTANDARD</span>
@@ -265,69 +248,25 @@
 
         <section id="section5">
             <div class="changeBg" data-bgcolor="#1a1a1a"></div>
-            <!-- <div class="sec5__background">
-                <div class="image__wrap">
-                    <img src="assets/img/javaScript.png" alt="/" />
-                    <img src="assets/img/html5.png" alt="/" />
-                    <img src="assets/img/css3.png" alt="/" />
-                    <img src="assets/img/react.png" alt="/" />
-                    <img src="assets/img/php.png" alt="/" />
-                    <img src="assets/img/vite.png" alt="/" />
-                    <img src="assets/img/vue.png" alt="/" />
-                    <img src="assets/img/postman.png" alt="/" />
-                    <img src="assets/img/javaScript.png" alt="/" />
-                    <img src="assets/img/html5.png" alt="/" />
-                    <img src="assets/img/css3.png" alt="/" />
-                    <img src="assets/img/react.png" alt="/" />
-                    <img src="assets/img/php.png" alt="/" />
-                    <img src="assets/img/vite.png" alt="/" />
-                    <img src="assets/img/vue.png" alt="/" />
-                    <img src="assets/img/postman.png" alt="/" />
-                </div>
-            </div> -->
             <div class="stack__inner">
                 <div class="container">
                     <div class="title">
                         <h1>STACK</h1>
                     </div>
                     <div class="stack__front">
-                        <div class="skill">JAVASCRIPT
-                            <img src="assets/img/javaScript.png" alt="/" />
-                        </div>
-                        <div class="skill">HTML5
-                            <img src="assets/img/html5.png" alt="/" />
-                        </div>
-                        <div class="skill">REACTJS
-                            <img src="assets/img/react.png" alt="/" />
-                        </div>
-                        <div class="skill">VITEJS
-                            <img src="assets/img/vite.png" alt="/" />
-                        </div>
-                        <div class="skill">VUEJS
-                            <img src="assets/img/vue.png" alt="/" />
-                        </div>
-                        <div class="skill">NEXTJS
-                            <img src="assets/img/css3.png" alt="/" />
-                        </div>
+                        <h1 class="text">JAVASCRIPT<span></span></h1>
+                        <h1 class="text">HTML5<span></span></h1>
+                        <h1 class="text">REACTJS<span></span></h1>
+                        <h1 class="text">VITEJS<span></span></h1>
+                        <h1 class="text">VUEJS<span></span></h1>
+                        <h1 class="text">NEXTJS<span></span></h1>
                     </div>
                     <div class="stack__back">
-                        <div class="skill">
-                            <img src="assets/img/php.png" alt="/" />PHP
-                            
-                        </div>
-                        <div class="skill">
-                            <img src="assets/img/react.png" alt="/" />MYSQL
-                            
-                        </div>
-                        <div class="skill">
-                            <img src="assets/img/vite.png" alt="/" />NODEJS
-                        </div>
-                        <div class="skill">
-                            <img src="assets/img/css3.png" alt="/" />MONGODB
-                        </div>
-                        <div class="skill">
-                            <img src="assets/img/postman.png" alt="/" />POSTMAN
-                        </div>
+                        <h1 class="text">PHP<span></span></h1>
+                        <h1 class="text">NODEJS<span></span></h1>
+                        <h1 class="text">MONGODB<span></span></h1>
+                        <h1 class="text">POSTMAN<span></span></h1>
+                        <h1 class="text">FIREBASE<span></span></h1>
                     </div>
                 </div>
             </div>

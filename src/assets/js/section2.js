@@ -8,7 +8,7 @@ export function section2() {
     const targets = gsap.utils.toArray('.split');
 
     targets.forEach(target => {
-        let splitClient = new SplitType(target, {type: 'lines, words, chars'});
+        let splitClient = new SplitType(target, { type: 'lines, words, chars' });
         let lines = splitClient.lines;
         let words = splitClient.words;
         let chars = splitClient.chars;
@@ -18,14 +18,14 @@ export function section2() {
             opacity: 0,
             rotation: gsap.utils.random(-30, 30), // Random rotation between -30 and 30 degrees
             scale: gsap.utils.random(0.5, 1.5), // Random scale between 0.5 and 1.5
-            duration: gsap.utils.random(0.5, 1.5), // Random duration between 0.5 and 1.5 seconds
-            stagger: 0.03,
+            duration: gsap.utils.random(1, 1.5), // Random duration between 0.5 and 1.5 seconds
+            stagger: 0.015,
             ease: 'power4.out', // Use a different easing function
             scrollTrigger: {
                 trigger: target,
                 start: 'top 80%', // Adjust the start position
                 end: 'bottom 20%', // Adjust the end position
-                markers: true,
+                // markers: true,
             },
         });
     });

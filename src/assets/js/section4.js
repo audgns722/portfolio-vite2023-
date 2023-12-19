@@ -2,58 +2,62 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export function section4() {
-    const projectPreviews = document.querySelectorAll('.image-container');
-    let throttleTimer;
-    const onMouseMove = e => {
-        if (!throttleTimer) {
-            throttleTimer = setTimeout(() => {
-                projectPreviews.forEach((projectPreview, index) => {
-                    const rect = projectPreview.getBoundingClientRect();
-                    const offsetX = e.clientX - rect.width / 2;
-                    const offsetY = e.clientY - rect.height / 2;
-                    projectPreview.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-                });
-                throttleTimer = null;
-            }, 20);
+    gsap.registerPlugin(ScrollTrigger);
+    const slider = document.querySelector(".site__inner");
+    const slide = document.querySelector(".slide")
+    const image = document.querySelector(".slider__image");
+    const bounds = slide.getBoundingClientRect();
+
+    // 이미지를 숨기는 함수
+    const hideImage = () => {
+        gsap.to(image, {
+            autoAlpha: 0,
+            onComplete: function () {
+                image.classList.add("ir");
+            }
+        });
+    };
+
+    // 이미지를 보여주는 함수
+    const showImage = (e) => {
+        const imageSrc = e.target.querySelector("img")?.getAttribute("data-src");
+
+        if (imageSrc) {
+            image.src = imageSrc;
+
+            const xMovement = Math.min(Math.max(parseInt(e.movementX), -20), 20);
+            const yMovement = Math.min(Math.max(parseInt(e.movementY), -20), 20);
+
+            const width = image.width;
+            const height = image.height;
+            const centerX = e.clientX - bounds.left - width / 2;
+            const centerY = e.clientY - bounds.top - height / 2;
+
+            gsap.to(image, {
+                autoAlpha: 0.9,
+                x: centerX,
+                y: centerY,
+                transformOrigin: "center",
+                rotation: xMovement,
+                skewX: xMovement,
+                skewY: yMovement
+            });
+        } else {
+            hideImage();
         }
     };
-    document.addEventListener('mousemove', onMouseMove);
 
-    // 각 .site에 대한 이벤트 리스너 추가
-    const siteElements = document.querySelectorAll('.site');
-    siteElements.forEach(siteElement => {
-        const imageElement = siteElement.querySelector('.image-container img'); // 현재 .site 요소 내부의 이미지 요소 선택
-        const hoverAnimation = gsap.timeline({
-            paused: true, // 초기에 애니메이션을 일시 중지
-        });
+    // 마우스가 영역을 벗어났을 때 이미지를 숨기는 함수 호출
+    slider.addEventListener("mouseleave", hideImage);
 
-        hoverAnimation.fromTo(
-            imageElement,
-            {
-                x: '50%', // 초기에 이미지를 오른쪽으로 이동시켜 보이지 않도록 설정
-                opacity: 0, // 초기에 이미지를 투명하게 설정
-            },
-            {
-                x: 0, // 이미지를 원래 위치로 이동하여 보이도록 설정
-                opacity: 1, // 이미지를 불투명하게 설정
-                ease: 'expo', // 자연스럽고 부드러운 효과를 위한 easing 설정
-                duration: 1, // 이미지 이동 및 페이드 애니메이션 지속 시간 설정
-            },
-        );
+    // 마우스가 영역에 들어왔을 때 이미지를 보이게 하는 함수 호출
+    slider.addEventListener("mouseenter", (e) => showImage(e));
 
-        // 마우스 호버 이벤트 리스너 추가
-        siteElement.addEventListener('mouseenter', () => {
-            hoverAnimation.play(); // 애니메이션 재생
-        });
+    // 마우스 이동 시 이미지를 보여주는 함수 호출
+    slider.addEventListener("mousemove", (e) => showImage(e));
 
-        // 마우스 아웃 이벤트 리스너 추가
-        siteElement.addEventListener('mouseleave', () => {
-            hoverAnimation.reverse(); // 애니메이션을 역으로 재생하여 초기 상태로 돌아감
-        });
+    // 윈도우 리사이즈 이벤트를 통해 중앙 위치 다시 계산
+    window.addEventListener("resize", () => {
+        bounds = slider.getBoundingClientRect();
     });
-
-    // 이벤트 리스너 해제 함수 반환
-    return () => {
-        document.removeEventListener('mousemove', onMouseMove);
-    };
 }

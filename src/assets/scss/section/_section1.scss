@@ -5,17 +5,17 @@
     .marquee__wrap {
         opacity: 0;
         transform: scale3d(0.7);
+
         .marquee {
             display: flex;
             overflow: hidden;
             border-bottom: 1px solid var(--black);
 
             .marquee-text {
-                margin: 5px 0;
-                padding: 4px 15px;
-                font-family: 'Arial', sans-serif;
-                font-size: 30px;
-                font-weight: bold;
+                font-weight: 300;
+                padding: 7px 15px;
+                font-family: 'GmarketSans';
+                font-size: 20px;
                 white-space: nowrap;
                 background-color: var(--black);
                 color: #c4c4c4;

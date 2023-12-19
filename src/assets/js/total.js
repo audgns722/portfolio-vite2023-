@@ -9,7 +9,7 @@ export function total() {
         ScrollTrigger.create({
             trigger: item,
             start: 'top center',
-            end: 'bottom 5%',
+            end: 'bottom center',
             onEnter: () =>
                 gsap.to('.changeBg', {
                     backgroundColor: color,
