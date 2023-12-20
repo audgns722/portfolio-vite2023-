@@ -23,13 +23,13 @@ export function section3() {
         scale: 2.5,
         y: "-50%",
         ease: "expo.in",
-        duration: 2,
         scrollTrigger: {
             trigger: '#section3',
             start: "top top",
             end: "+=3000",
             invalidateOnRefresh: true,
             anticipatePin: 1,
+            scrub: true,
             markers: true
         }
 

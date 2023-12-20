@@ -22,7 +22,6 @@ export function total() {
                     backgroundColor: color,
                     duration: 1.4,
                 }),
-            markers: true, // 여기에 markers: true 추가
         });
     });
 

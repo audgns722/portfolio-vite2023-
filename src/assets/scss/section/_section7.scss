@@ -11,19 +11,19 @@
     }
 
     .contact__me {
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+
         .top__text {
             font-family: var(--mainfont-big);
             text-transform: uppercase;
             text-align: center;
-            line-height: 1.1;
-            font-weight: 700;
 
             .t1,
             .t2 {
                 font-size: 5.25vw;
                 color: var(--white);
-                line-height: 1;
+                line-height: 0.9;
             }
         }
 
@@ -34,7 +34,7 @@
             width: 95%;
             margin-top: 4vw;
             display: flex;
-            gap: 2vw;
+            justify-content: space-between;
 
             @media (max-width: 800px) {
                 flex-direction: column;
@@ -43,17 +43,16 @@
             }
 
             .left {
-                width: 60%;
+                width: 45%;
 
                 @media (max-width: 800px) {
                     width: 100%;
                 }
 
                 .title {
-                    font-family: var(--engfont);
-                    font-weight: 500;
+                    font-family: var(--subfont1);
                     text-transform: uppercase;
-                    font-size: 3.12vw;
+                    font-size: 2.5vw;
                 }
 
                 .comment__input {
@@ -73,11 +72,8 @@
                         input {
                             height: 100%;
                             width: 100%;
-
-                            background-color: rgb(35 35 35 / 90%);
-
                             padding-left: 10px;
-                            color: var(--white);
+                            color: var(--black);
                         }
                     }
 
@@ -89,54 +85,52 @@
                         input {
                             width: 100%;
                             height: 100%;
-
-                            background-color: rgb(35 35 35 / 90%);
-
                             padding-left: 10px;
-                            color: var(--white);
+                            color: var(--black);
                         }
                     }
 
                     .comment__btn {
-                        width: 45px;
-                        height: 45px;
-                        color: var(--white);
-                        background-color: rgb(35 35 35 / 90%);
-
                         cursor: pointer;
+                        font-family: var(--subfont1);
+                        width: 45px;
+                        color: var(--black);
+                        height: 45px;
+                        font-size: 22px;
                     }
                 }
 
                 .comment__result {
                     width: 100%;
                     margin-top: 2.08vw;
+                    background-color: #fff;
 
                     .comments {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
                         width: 100%;
-                        height: 50px;
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px 15px;
 
                         .text {
+                            display: inline-block;
                             font-family: var(--korfont);
-                            font-size: 1rem;
-                            font-weight: 300;
+                            font-size: 16px;
+                            color: var(--black);
+                            font-weight: 500;
                         }
 
                         .author {
-                            font-family: var(--mainfont-small2);
-                            letter-spacing: 3px;
+                            display: inline-block;
+                            float: right;
+                            font-family: var(--mainfont-small);
                             font-weight: 500;
-                            font-size: 0.9rem;
-                            color: #48456c;
+                            color: var(--black);
                         }
                     }
                 }
             }
 
             .right {
-                width: 40%;
+                width: 45%;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -147,10 +141,9 @@
                 }
 
                 .title {
-                    font-family: var(--engfont);
-                    font-weight: 500;
+                    font-family: var(--subfont1);
                     text-transform: uppercase;
-                    font-size: 3.12vw;
+                    font-size: 2.5vw;
                 }
 
                 #contactme {
@@ -162,19 +155,15 @@
                     }
 
                     .mailform {
-                        font-family: 'Arial', sans-serif;
                         font-size: 1rem;
-                        color: var(--white);
+                        color: var(--black);
 
                         .email {
                             input {
                                 height: 45px;
                                 width: 100%;
-
-                                background-color: rgb(35 35 35 / 90%);
-
                                 padding-left: 10px;
-                                color: var(--white);
+                                color: var(--black);
                             }
                         }
 
@@ -184,28 +173,28 @@
                                 resize: none;
                                 height: 11.1vw;
                                 width: 100%;
-
-                                background-color: rgb(35 35 35 / 90%);
-
-                                padding-left: 10px;
-                                padding-top: 10px;
-                                color: var(--white);
+                                padding: 10px;
+                                color: var(--black);
 
                                 @media (max-width: 800px) {
                                     height: 10vh;
+                                }
+
+                                &::placeholder {
+                                    color: var(--black);
+                                    font-weight: 400;
                                 }
                             }
                         }
 
                         .submit {
-                            input {
+                            button {
                                 cursor: pointer;
+                                font-family: var(--subfont1);
                                 width: 100%;
-
-                                background-color: rgb(35 35 35 / 90%);
-
-                                color: var(--white);
+                                color: var(--black);
                                 height: 45px;
+                                font-size: 22px;
                             }
                         }
                     }

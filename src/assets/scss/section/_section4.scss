@@ -21,17 +21,15 @@
                 h1 {
                     margin-bottom: 1vw;
                     font-family: var(--mainfont-small);
-                    font-size: 30px;
+                    font-size: 18px;
                     color: #ff663e;
-                    font-weight: 900;
                 }
 
                 p {
                     margin-top: 15px;
-                    font-family: var(--mainfont-small2);
+                    font-family: var(--mainfont-small);
                     font-size: 2rem;
                     word-break: keep-all;
-                    font-weight: 400;
                     line-height: 1.4;
                     color: var(--white);
                 }
@@ -87,7 +85,7 @@
                             border-radius: 30px;
                             font-size: 14px;
                             font-family: var(--engfont);
-                            font-weight: 700;
+                            font-weight: 500;
                             border: 1px solid var(--black);
                             transition: all 0.3s;
                         }
@@ -103,7 +101,7 @@
                         span {
                             color: #709885;
                             font-family: var(--engfont);
-                            font-weight: 700;
+                            font-weight: 500;
                             font-size: 1.2rem;
                         }
                     }
@@ -116,7 +114,6 @@
 
                         span {
                             font-size: 1.2rem;
-
                             display: flex;
                             align-items: center;
                             padding-bottom: 5px;
@@ -124,6 +121,7 @@
                             text-decoration: underline;
                             text-underline-position: under;
                             cursor: pointer;
+                            line-height: 1;
 
                             .right__arrow {
                                 background-image: url(../../img/arrowright.svg);
@@ -194,7 +192,7 @@
         color: var(--white);
 
         h1 {
-            font-family: var(--mainfont-small2);
+            font-family: var(--subfont1);
             font-weight: 400;
             font-size: 2.5rem;
             line-height: 1.1;
@@ -204,8 +202,8 @@
         span {
             margin-top: 25px;
             display: inline-block;
-            font-family: var(--mainfont-small);
-            font-weight: 300;
+            font-family: var(--engfont);
+            font-weight: 500;
             font-size: 1.1rem;
             text-decoration: underline;
             text-underline-position: under;

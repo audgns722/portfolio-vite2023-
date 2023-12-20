@@ -9,12 +9,12 @@ export function section6() {
     const rightWrap = section.querySelector('.right__wrap');
     const profileImg = section.querySelector('.profileimg');
 
-    gsap.set([leftWrap, rightWrap, profileImg], {autoAlpha: 0});
+    gsap.set([leftWrap, rightWrap, profileImg], { autoAlpha: 0 });
 
     // left__wrap 애니메이션
     gsap.fromTo(
         leftWrap,
-        {xPercent: -100, autoAlpha: 0},
+        { xPercent: -100, autoAlpha: 0 },
         {
             xPercent: 0,
             autoAlpha: 1,
@@ -32,7 +32,7 @@ export function section6() {
     // right__wrap 애니메이션
     gsap.fromTo(
         rightWrap,
-        {xPercent: 100, autoAlpha: 0, scale: 0.7},
+        { xPercent: 100, autoAlpha: 0, scale: 0.7 },
         {
             xPercent: 0,
             autoAlpha: 1,
@@ -51,7 +51,7 @@ export function section6() {
     // profileimg 애니메이션
     gsap.fromTo(
         profileImg,
-        {xPercent: -100, autoAlpha: 0},
+        { xPercent: -100, autoAlpha: 0 },
         {
             xPercent: 0,
             autoAlpha: 1,
@@ -68,9 +68,9 @@ export function section6() {
 
     gsap.fromTo(
         '.contact__me',
-        {yPercent: 0, autoAlpha: 0},
+        { yPercent: 0, autoAlpha: 0 },
         {
-            yPercent: '5%',
+            yPercent: 10,
             autoAlpha: 1,
             ease: 'expo.in',
             scrollTrigger: {

@@ -1,13 +1,12 @@
 :root {
-    --mainfont-small3: 'VitroCore';
-    // --mainfont-small: 'Rubik Wet Paint';
-    --mainfont-small: 'Sigmar', sans-serif;
-    --mainfont-small2: 'BMDoHyeon';
-
+    // 메인큰글씨
     --mainfont-big: 'League Gothic';
-    // --korfont: 'KotraGothic';
-    --korfont: 'NanumSquareNeo';
-    --engfont: 'Noto Sans', sans-serif;
+    --subfont1: 'Russo One', sans-serif;
+
+    --mainfont-small: 'Russo One', sans-serif;
+
+    --korfont: 'ChosunNm';
+    --engfont: "GmarketSans";
 
     --black: #000;
     --yellow: #ddff0d;
@@ -15,7 +14,7 @@
     --white: #fff;
 
     // 폰트 셋팅
-    font-family: var(--mainfont-big) var(--mainfont-small) var(--korfont);
+    font-family: var(--mainfont-big) var(--subfont1) var(--korfont) var(--engfont);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;

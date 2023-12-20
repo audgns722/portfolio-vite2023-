@@ -3,6 +3,7 @@ body {
     color: var(--black);
 }
 
-#section1 {
-    padding-top: 70px;
+input::placeholder {
+    color: var(--black);
+    font-weight: 400;
 }

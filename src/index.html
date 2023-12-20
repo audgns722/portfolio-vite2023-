@@ -1,397 +1,381 @@
 <!doctype html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hun`s Portfolio</title>
 
-        <link rel="stylesheet" href="assets/scss/style.scss" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hun`s Portfolio</title>
 
-    <body>
-        <header id="header">
-            <div class="header__logo">
-                <h1>M.HUN`S</h1>
-                <img src="assets/img/logo_v2.png" alt="logosvg" />
+    <link rel="stylesheet" href="assets/scss/style.scss" />
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__logo">
+            <h1>M.HUN`S</h1>
+            <img src="assets/img/logo_v2.png" alt="logosvg" />
+        </div>
+        <div class="header__nav">
+            <ul>
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="section1">
+            <div class="marquee__wrap mq1">
+                <div class="marquee marquee1">
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                </div>
+                <div class="marquee marquee2">
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
+                </div>
             </div>
-            <div class="header__nav">
-                <ul>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
+            <div class="main__text">
+                <div>port</div>
+                <div>folio</div>
+                <!-- <canvas id="webgl-canvas"></canvas> -->
+                <span></span>
             </div>
-        </header>
+            <div class="marquee__wrap mq2">
+                <div class="marquee marquee3">
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                    <p class="marquee-text">Hello my portfolio</p>
+                </div>
+                <div class="marquee marquee4 mq4">
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
+                    <p class="marquee-text">portfolio developer</p>
+                </div>
+            </div>
+        </section>
 
-        <main id="main">
-            <section id="section1">
-                <div class="marquee__wrap">
-                    <div class="marquee marquee1">
-                        <p class="marquee-text">Hello my portfolio</p>
-                        <p class="marquee-text">Hello my portfolio</p>
-                        <p class="marquee-text">Hello my portfolio</p>
-                    </div>
-                    <div class="marquee marquee2">
-                        <p class="marquee-text">portfolio developer</p>
-                        <p class="marquee-text">portfolio developer</p>
-                        <p class="marquee-text">portfolio developer</p>
-                    </div>
-                </div>
-                <div class="main__text">
-                    <div>port</div>
-                    <div>folio</div>
-                    <canvas id="webgl-canvas"></canvas>
-                    <span></span>
-                </div>
-                <div class="marquee__wrap">
-                    <div class="marquee marquee3">
-                        <p class="marquee-text">Hello my portfolio</p>
-                        <p class="marquee-text">Hello my portfolio</p>
-                        <p class="marquee-text">Hello my portfolio</p>
-                    </div>
-                    <div class="marquee marquee4">
-                        <p class="marquee-text">portfolio developer</p>
-                        <p class="marquee-text">portfolio developer</p>
-                        <p class="marquee-text">portfolio developer</p>
-                    </div>
-                </div>
-            </section>
+        <section id="section2">
+            <div class="desc">
+                <h1>ABOUT</h1>
+                <p class="split">
+                    안녕하세요. 프론트앤드 개발자를 꿈꾸는 이명훈입니다.<br />
+                    어릴 때부터 컴퓨터에 관심이 많았고, 웹 개발에 매력을 느껴 프론트엔드 개발자를 꿈꾸게
+                    되었습니다.<br />
+                    저는 항상 새로운 기술을 배우고 실력을 향상시키기 위해 노력하고 있습니다.<br />
+                    앞으로도 열심히 노력해서 뛰어난 프론트엔드 개발자가 되겠습니다.
+                </p>
+            </div>
+        </section>
 
-            <section id="section2">
-                <div class="desc">
-                    <h1>ABOUT</h1>
-                    <p class="split">
-                        안녕하세요. 프론트앤드 개발자를 꿈꾸는 이명훈입니다.<br />
-                        어릴 때부터 컴퓨터에 관심이 많았고, 웹 개발에 매력을 느껴 프론트엔드 개발자를 꿈꾸게
-                        되었습니다.<br />
-                        저는 항상 새로운 기술을 배우고 실력을 향상시키기 위해 노력하고 있습니다.<br />
-                        앞으로도 열심히 노력해서 뛰어난 프론트엔드 개발자가 되겠습니다.
-                    </p>
-                </div>
-            </section>
-
-            <section id="section3">
-                <div class="backgroud__cont">Introducing<br />my project</div>
-                <div class="project__inner">
-                    <div class="project__wrap">
-                        <div class="project__item">
-                            <div class="img"></div>
-                            <h3 class="title">PHP TEAM PROJECT</h3>
-                            <p class="desc">
-                                분리의신은 일상 생활 속에서 발생하는 잘못된 분리배출을 알려주고, 간편한 검색을 통해
-                                올바른 배출 방법을 안내하는 웹사이트입니다. 처음 접해본 PHP를 통해 여러 시행착오를
-                                격으면서 많은 경험을 하였고, 사용자의 피드백을 통해 더 나은 서비스를 제공하는 방향으로
-                                개선하고 싶습니다. 프로젝트를 통해 팀원과의 협업의 중요성을 배우는 계기가 되었습니다.
-                            </p>
-                            <div class="btn">
-                                <a href="#">VIEW</a>
-                                <a href="#">CODE</a>
-                            </div>
+        <section id="section3">
+            <div class="backgroud__cont">Introducing<br />my project</div>
+            <div class="project__inner">
+                <div class="project__wrap">
+                    <div class="project__item">
+                        <div class="img"></div>
+                        <h3 class="title">PHP TEAM PROJECT</h3>
+                        <p class="desc">
+                            분리의신은 일상 생활 속에서 발생하는 잘못된 분리배출을 알려주고, 간편한 검색을 통해
+                            올바른 배출 방법을 안내하는 웹사이트입니다. 처음 접해본 PHP를 통해 여러 시행착오를
+                            격으면서 많은 경험을 하였고, 사용자의 피드백을 통해 더 나은 서비스를 제공하는 방향으로
+                            개선하고 싶습니다. 프로젝트를 통해 팀원과의 협업의 중요성을 배우는 계기가 되었습니다.
+                        </p>
+                        <div class="btn">
+                            <a href="#">VIEW</a>
+                            <a href="#">CODE</a>
                         </div>
-                        <div class="project__item">
-                            <div class="img"></div>
-                            <h3 class="title">REACT BLOG SITE</h3>
-                            <p class="desc">
-                                리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를
-                                도입하여 스타일을 보다 효과적으로 다루었고, 더 많은 기능을 쉽게 추가할 수 있는 구조를
-                                갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나
-                                기여할 수 있는 환경을 조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해
-                                블로그를 확장하는 데 최적화되어 있습니다.
-                            </p>
-                            <div class="btn">
-                                <a href="#">VIEW</a>
-                                <a href="#">CODE</a>
-                            </div>
+                    </div>
+                    <div class="project__item">
+                        <div class="img"></div>
+                        <h3 class="title">REACT BLOG SITE</h3>
+                        <p class="desc">
+                            리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를
+                            도입하여 스타일을 보다 효과적으로 다루었고, 더 많은 기능을 쉽게 추가할 수 있는 구조를
+                            갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나
+                            기여할 수 있는 환경을 조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해
+                            블로그를 확장하는 데 최적화되어 있습니다.
+                        </p>
+                        <div class="btn">
+                            <a href="#">VIEW</a>
+                            <a href="#">CODE</a>
                         </div>
-                        <div class="project__item">
-                            <div class="img"></div>
-                            <h3 class="title">REACT YOUTUBE SITE</h3>
-                            <p class="desc">
-                                유튜브 API를 이용하여 제가 좋아하는 다큐사이트를 만들었습니다.당신을 다큐멘터리 세계로
-                                초대합니다.평소 다큐멘터리에 대한 끊임없는 탐구와 흥미로운 여정을 공유합니다.이곳에서는
-                                다양한 주제와 편견 없는 시각으로 선보이는 다큐멘터리들이 당신을 기다리고 있습니다.
-                            </p>
-                            <div class="btn">
-                                <a href="#">VIEW</a>
-                                <a href="#">CODE</a>
-                            </div>
+                    </div>
+                    <div class="project__item">
+                        <div class="img"></div>
+                        <h3 class="title">REACT YOUTUBE SITE</h3>
+                        <p class="desc">
+                            유튜브 API를 이용하여 제가 좋아하는 다큐사이트를 만들었습니다.당신을 다큐멘터리 세계로
+                            초대합니다.평소 다큐멘터리에 대한 끊임없는 탐구와 흥미로운 여정을 공유합니다.이곳에서는
+                            다양한 주제와 편견 없는 시각으로 선보이는 다큐멘터리들이 당신을 기다리고 있습니다.
+                        </p>
+                        <div class="btn">
+                            <a href="#">VIEW</a>
+                            <a href="#">CODE</a>
                         </div>
-                        <div class="project__item">
-                            <div class="img"></div>
-                            <h3 class="title">VUE MOVIE SITE</h3>
-                            <p class="desc">
-                                리액트를 이용하여 포트폴리오 사이트를 만들었습니다. 디테일과 꼼꼼함이 넘치는
-                                포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다. GSAP와 React.js를 이용하여
-                                사이트를 표현한 것은 기술적인 능력과 창의성을 강조합니다. 세심한 코딩과 디테일한
-                                작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                            </p>
-                            <div class="btn">
-                                <a href="https://vue-movieking-site-project2023.netlify.app" target="_blank">VIEW</a>
-                                <a href="https://github.com/audgns722/vue-movie-porject2023" target="_blank">CODE</a>
-                            </div>
+                    </div>
+                    <div class="project__item">
+                        <div class="img"></div>
+                        <h3 class="title">VUE MOVIE SITE</h3>
+                        <p class="desc">
+                            리액트를 이용하여 포트폴리오 사이트를 만들었습니다. 디테일과 꼼꼼함이 넘치는
+                            포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다. GSAP와 React.js를 이용하여
+                            사이트를 표현한 것은 기술적인 능력과 창의성을 강조합니다. 세심한 코딩과 디테일한
+                            작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
+                        </p>
+                        <div class="btn">
+                            <a href="https://vue-movieking-site-project2023.netlify.app" target="_blank">VIEW</a>
+                            <a href="https://github.com/audgns722/vue-movie-porject2023" target="_blank">CODE</a>
                         </div>
-                        <div class="project__item">
-                            <div class="img"></div>
-                            <h3 class="title">VUE MOVIE SITE</h3>
-                            <p class="desc">
-                                리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를
-                                도입하여 스타일을 보다 효과적으로 다루었고, 더 많은 기능을 쉽게 추가할 수 있는 구조를
-                                갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나
-                                기여할 수 있는 환경을 조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해
-                                블로그를 확장하는 데 최적화되어 있습니다.
-                            </p>
-                            <div class="btn">
-                                <a href="#">VIEW</a>
-                                <a href="#">CODE</a>
-                            </div>
+                    </div>
+                    <div class="project__item">
+                        <div class="img"></div>
+                        <h3 class="title">VUE MOVIE SITE</h3>
+                        <p class="desc">
+                            리액트 기반 블로그 사이트는 게시판과 함께 사용자 친화적인 디자인을 제공합니다. Sass를
+                            도입하여 스타일을 보다 효과적으로 다루었고, 더 많은 기능을 쉽게 추가할 수 있는 구조를
+                            갖추었습니다. 프로젝트를 로컬에서 실행하려면 간단한 몇 가지 단계만 따르면 되며, 누구나
+                            기여할 수 있는 환경을 조성했습니다. 검색, 태그, 사용자 인증과 같은 다양한 기능을 통해
+                            블로그를 확장하는 데 최적화되어 있습니다.
+                        </p>
+                        <div class="btn">
+                            <a href="#">VIEW</a>
+                            <a href="#">CODE</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <div class="scroll__down">
+            <h1>Want to see my site?</h1>
+            <span>Scroll Down<em></em></span>
+        </div>
+
+        <section id="section4">
+            <div class="changeBg" data-bgcolor="rgb(30 59 41)"></div>
+            <div class="site__inner">
+                <div class="container">
+                    <div class="title">
+                        <h1>SCRIPT</h1>
+                        <p>INTRODUCING MY SCRIPT</p>
+                    </div>
+                    <div class="slider">
+                        <img class="slider__image" data-src="" alt="" />
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/protimg2.png" alt="" />
+                            <div class="left">
+                                <div>WEBSTANDARD</div>
+                                <span class="s1">WEBSTANDARD</span>
+                                <span class="s2">JAVASCRIPT</span>
+                                <span class="s3">HTML5</span>
+                            </div>
+                            <div class="center">
+                                <span>QUIZ-GAME</span>
+                                <span>2023</span>
+                            </div>
+                            <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
+                        </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/reactyoutube.png" alt="" />
+                            <div class="left">
+                                <div>WEBSTANDARD</div>
+                                <span class="s1">WEBSTANDARD</span>
+                                <span class="s2">JAVASCRIPT</span>
+                                <span class="s3">HTML5</span>
+                            </div>
+                            <div class="center">
+                                <span>QUIZ-GAME</span>
+                                <span>2023</span>
+                            </div>
+                            <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
+                        </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/testimg.png" alt="" />
+                            <div class="left">
+                                <div>WEBSTANDARD</div>
+                                <span class="s1">WEBSTANDARD</span>
+                                <span class="s2">JAVASCRIPT</span>
+                                <span class="s3">HTML5</span>
+                            </div>
+                            <div class="center">
+                                <span>QUIZ-GAME</span>
+                                <span>2023</span>
+                            </div>
+                            <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
+                        </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/vuemovie.png" alt="" />
+                            <div class="left">
+                                <div>WEBSTANDARD</div>
+                                <span class="s1">WEBSTANDARD</span>
+                                <span class="s2">JAVASCRIPT</span>
+                                <span class="s3">HTML5</span>
+                            </div>
+                            <div class="center">
+                                <span>QUIZ-GAME</span>
+                                <span>2023</span>
+                            </div>
+                            <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
+                        </div>
+                        <div class="slide noline">
+                            <img class="slide__image" data-src="assets/img/portimg1.png" alt="" />
+                            <div class="left">
+                                <div>WEBSTANDARD</div>
+                                <span class="s1">WEBSTANDARD</span>
+                                <span class="s2">JAVASCRIPT</span>
+                                <span class="s3">HTML5</span>
+                            </div>
+                            <div class="center">
+                                <span>QUIZ-GAME</span>
+                                <span>2023</span>
+                            </div>
+                            <a class="right" href="#"><span>VIEW<em class="right__arrow"></em></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="scroll__down">
-                <h1>Want to see my site?</h1>
+                <h1>More About Me?</h1>
                 <span>Scroll Down<em></em></span>
             </div>
+        </section>
 
-            <section id="section4">
-                <div class="changeBg" data-bgcolor="rgb(30 59 41)"></div>
-                <div class="site__inner">
-                    <div class="container">
-                        <div class="title">
-                            <h1>SITE</h1>
-                            <p>INTRODUCING MY WEBSITE</p>
-                        </div>
-                        <div class="slider">
-                            <img class="slider__image" data-src="" alt="" />
-                            <div class="slide noline">
-                                <img class="slide__image" data-src="assets/img/protimg2.png" alt="" />
-                                <div class="left">
-                                    <div>WEBSTANDARD</div>
-                                    <span class="s1">WEBSTANDARD</span>
-                                    <span class="s2">JAVASCRIPT</span>
-                                    <span class="s3">HTML5</span>
-                                </div>
-                                <div class="center">
-                                    <span>QUIZ-GAME</span>
-                                    <span>2023</span>
-                                </div>
-                                <a class="right" href="#"
-                                    ><span>VIEW<em class="right__arrow"></em></span
-                                ></a>
+        <section id="section5">
+            <div class="changeBg" data-bgcolor="#1a1a1a"></div>
+            <div class="stack__inner">
+                <div class="container">
+                    <div class="title">
+                        <h1>STACK</h1>
+                    </div>
+                    <div class="stack__front">
+                        <h1 class="text">JAVASCRIPT<span></span></h1>
+                        <h1 class="text">HTML5<span></span></h1>
+                        <h1 class="text">REACTJS<span></span></h1>
+                        <h1 class="text">VITEJS<span></span></h1>
+                        <h1 class="text">VUEJS<span></span></h1>
+                        <h1 class="text">NEXTJS<span></span></h1>
+                    </div>
+                    <div class="stack__back">
+                        <h1 class="text">PHP<span></span></h1>
+                        <h1 class="text">NODEJS<span></span></h1>
+                        <h1 class="text">MONGODB<span></span></h1>
+                        <h1 class="text">POSTMAN<span></span></h1>
+                        <h1 class="text">FIREBASE<span></span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section6">
+            <div class="changeBg" data-bgcolor="rgb(0,0,0,0)"></div>
+            <div class="about__inner">
+                <div class="left__wrap">
+                    <h1>About<br />Me<em>M.HUN`S</em></h1>
+                    <p>creative<br />developer</p>
+                </div>
+                <div class="right">
+                    <div class="right__wrap">
+                        <div class="info__wrap">
+                            <div class="info">
+                                <h1>Info</h1>
+                                <p>Name<em>이명훈</em></p>
+                                <p>Email<em>audgns722@gmail.com</em></p>
+                                <p>Phone<em>01085745734</em></p>
+                                <p>Kakao<em>audgns722</em></p>
+                                <p>Email<em>https://github.com/audgns722</em></p>
                             </div>
-                            <div class="slide noline">
-                                <img class="slide__image" data-src="assets/img/reactyoutube.png" alt="" />
-                                <div class="left">
-                                    <div>WEBSTANDARD</div>
-                                    <span class="s1">WEBSTANDARD</span>
-                                    <span class="s2">JAVASCRIPT</span>
-                                    <span class="s3">HTML5</span>
+                            <div class="right__bottom">
+                                <div class="front">
+                                    <h1>Front-End</h1>
+                                    <p>Javascript</p>
+                                    <p>ReactJS</p>
+                                    <p>VueJS</p>
+                                    <p>VieJS</p>
+                                    <p>NextJS</p>
+                                    <p>Html5</p>
+                                    <p>Css3</p>
                                 </div>
-                                <div class="center">
-                                    <span>QUIZ-GAME</span>
-                                    <span>2023</span>
+                                <div class="back">
+                                    <h1>Back-End</h1>
+                                    <p>Php</p>
+                                    <p>NodeJS</p>
+                                    <p>MongoDB</p>
                                 </div>
-                                <a class="right" href="#"
-                                    ><span>VIEW<em class="right__arrow"></em></span
-                                ></a>
-                            </div>
-                            <div class="slide noline">
-                                <img class="slide__image" data-src="assets/img/testimg.png" alt="" />
-                                <div class="left">
-                                    <div>WEBSTANDARD</div>
-                                    <span class="s1">WEBSTANDARD</span>
-                                    <span class="s2">JAVASCRIPT</span>
-                                    <span class="s3">HTML5</span>
-                                </div>
-                                <div class="center">
-                                    <span>QUIZ-GAME</span>
-                                    <span>2023</span>
-                                </div>
-                                <a class="right" href="#"
-                                    ><span>VIEW<em class="right__arrow"></em></span
-                                ></a>
-                            </div>
-                            <div class="slide noline">
-                                <img class="slide__image" data-src="assets/img/vuemovie.png" alt="" />
-                                <div class="left">
-                                    <div>WEBSTANDARD</div>
-                                    <span class="s1">WEBSTANDARD</span>
-                                    <span class="s2">JAVASCRIPT</span>
-                                    <span class="s3">HTML5</span>
-                                </div>
-                                <div class="center">
-                                    <span>QUIZ-GAME</span>
-                                    <span>2023</span>
-                                </div>
-                                <a class="right" href="#"
-                                    ><span>VIEW<em class="right__arrow"></em></span
-                                ></a>
-                            </div>
-                            <div class="slide noline">
-                                <img class="slide__image" data-src="assets/img/portimg1.png" alt="" />
-                                <div class="left">
-                                    <div>WEBSTANDARD</div>
-                                    <span class="s1">WEBSTANDARD</span>
-                                    <span class="s2">JAVASCRIPT</span>
-                                    <span class="s3">HTML5</span>
-                                </div>
-                                <div class="center">
-                                    <span>QUIZ-GAME</span>
-                                    <span>2023</span>
-                                </div>
-                                <a class="right" href="#"
-                                    ><span>VIEW<em class="right__arrow"></em></span
-                                ></a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="scroll__down">
-                    <h1>More About Me?</h1>
-                    <span>Scroll Down<em></em></span>
-                </div>
-            </section>
-
-            <section id="section5">
-                <div class="changeBg" data-bgcolor="#1a1a1a"></div>
-                <div class="stack__inner">
-                    <div class="container">
-                        <div class="title">
-                            <h1>STACK</h1>
-                        </div>
-                        <div class="stack__front">
-                            <h1 class="text">JAVASCRIPT<span></span></h1>
-                            <h1 class="text">HTML5<span></span></h1>
-                            <h1 class="text">REACTJS<span></span></h1>
-                            <h1 class="text">VITEJS<span></span></h1>
-                            <h1 class="text">VUEJS<span></span></h1>
-                            <h1 class="text">NEXTJS<span></span></h1>
-                        </div>
-                        <div class="stack__back">
-                            <h1 class="text">PHP<span></span></h1>
-                            <h1 class="text">NODEJS<span></span></h1>
-                            <h1 class="text">MONGODB<span></span></h1>
-                            <h1 class="text">POSTMAN<span></span></h1>
-                            <h1 class="text">FIREBASE<span></span></h1>
-                        </div>
+                    <div class="profileimg">
+                        <img src="assets/img/profile.png" alt="profile" />
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="section6">
-                <div class="changeBg" data-bgcolor="rgb(0,0,0,0)"></div>
-                <div class="about__inner">
-                    <div class="left__wrap">
-                        <h1>About<br />Me<em>M.HUN`S</em></h1>
-                        <p>creative<br />developer</p>
+        <section id="section7">
+            <div class="changeBg" data-bgcolor="#1a1a1a"></div>
+            <div class="contact__me">
+                <div class="top__text">
+                    <div class="t1">Thank you</div>
+                    <div class="t2">For Watching</div>
+                </div>
+
+                <div class="bottom__cont">
+                    <div class="left">
+                        <div class="title">Comment</div>
+                        <div class="comment__input">
+                            <p class="comment__name">
+                                <input type="text" name="name" placeholder="Write your name" />
+                            </p>
+                            <p class="comment__text">
+                                <input type="text" name="comment" id="comment" placeholder="Please comment here!" />
+                            </p>
+                            <button class="comment__btn">GO</button>
+                        </div>
+                        <div class="comment__result">
+                            <div class="comments">
+                                <p class="text">반가워요.</p>
+                                <p class="author">이명훈</p>
+                            </div>
+                            <div class="comments">
+                                <p class="text">반가워요.</p>
+                                <p class="author">작성자 : 이명훈</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="right">
-                        <div class="right__wrap">
-                            <div class="info__wrap">
-                                <div class="info">
-                                    <h1>Info</h1>
-                                    <p>Name<em>이명훈</em></p>
-                                    <p>Email<em>audgns722@gmail.com</em></p>
-                                    <p>Phone<em>01085745734</em></p>
-                                    <p>Kakao<em>audgns722</em></p>
-                                    <p>Email<em>https://github.com/audgns722</em></p>
+                        <div class="title">Contact</div>
+                        <div id="contactme">
+                            <form class="mailform" id="mailform">
+                                <p class="email">
+                                    <input name="email" type="text" placeholder="Email" />
+                                </p>
+                                <p class="text">
+                                    <textarea name="text" id="comment" placeholder="Please Message here!"></textarea>
+                                </p>
+                                <div class="submit">
+                                    <button type="submit" value="SEND" id="button">SEND</button>
                                 </div>
-                                <div class="right__bottom">
-                                    <div class="front">
-                                        <h1>Front-End</h1>
-                                        <p>Javascript</p>
-                                        <p>ReactJS</p>
-                                        <p>VueJS</p>
-                                        <p>VieJS</p>
-                                        <p>NextJS</p>
-                                        <p>Html5</p>
-                                        <p>Css3</p>
-                                    </div>
-                                    <div class="back">
-                                        <h1>Back-End</h1>
-                                        <p>Php</p>
-                                        <p>NodeJS</p>
-                                        <p>MongoDB</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="profileimg">
-                            <img src="assets/img/profile.png" alt="profile" />
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section id="section7">
-                <div class="changeBg" data-bgcolor="#1a1a1a"></div>
-                <div class="contact__me">
-                    <div class="top__text">
-                        <div class="t1">Thank you</div>
-                        <div class="t2">For Watching</div>
-                    </div>
+    <footer id="footer">
+        <h5>M.HUN`S©2023 Front-End Dev</h5>
+        <ul>
+            <li><a href="#">email</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">github</a></li>
+        </ul>
+    </footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
 
-                    <div class="bottom__cont">
-                        <div class="left">
-                            <div class="title">Comment</div>
-                            <div class="comment__input">
-                                <p class="comment__name">
-                                    <input type="text" name="name" placeholder="Write your name" />
-                                </p>
-                                <p class="comment__text">
-                                    <input type="text" name="comment" id="comment" placeholder="Please comment here!" />
-                                </p>
-                                <button class="comment__btn">GO</button>
-                            </div>
-                            <div class="comment__result">
-                                <div class="comments">
-                                    <p class="text">반갑습니다.</p>
-                                    <p class="author">/ MyeongHun</p>
-                                </div>
-                                <div class="comments">
-                                    <p class="text">반갑습니다.</p>
-                                    <p class="author">/ MyeongHun</p>
-                                </div>
-                                <div class="comments">
-                                    <p class="text">반갑습니다.</p>
-                                    <p class="author">/ MyeongHun</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="title">Contact Me</div>
-                            <div id="contactme">
-                                <form class="mailform" id="mailform">
-                                    <p class="email">
-                                        <input name="email" type="text" placeholder="Email" />
-                                    </p>
-                                    <p class="text">
-                                        <textarea
-                                            name="text"
-                                            id="comment"
-                                            placeholder="Please Message here!"
-                                        ></textarea>
-                                    </p>
-                                    <div class="submit">
-                                        <input type="submit" value="SEND" id="button" />
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer id="footer">
-            <h5>M.HUN`S©2023 Front-End</h5>
-            <ul>
-                <li><a href="#">email</a></li>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">github</a></li>
-            </ul>
-        </footer>
-        <script type="module" src="assets/js/main.js"></script>
-    </body>
 </html>

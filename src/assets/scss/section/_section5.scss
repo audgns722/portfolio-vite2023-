@@ -45,9 +45,8 @@
                 h1 {
                     margin-bottom: 1vw;
                     font-family: var(--mainfont-small);
-                    font-size: 30px;
+                    font-size: 18px;
                     color: #ff663e;
-                    font-weight: 900;
                 }
             }
 
@@ -55,12 +54,12 @@
                 width: 100%;
 
                 .text {
-                    font-size: 10vw;
+                    font-size: 5vw;
                     letter-spacing: -0.01em;
                     line-height: 100%;
                     margin: 0;
                     width: 100%;
-                    color: rgb(182, 182, 182, 0.2);
+                    color: rgba(208, 255, 0, 0.3);
                     background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -128,14 +127,15 @@
 
             .stack__back {
                 width: 100%;
+                margin-top: 10vh;
 
                 .text {
-                    font-size: 10vw;
+                    font-size: 5vw;
                     letter-spacing: -0.01em;
                     line-height: 100%;
                     margin: 0;
                     width: 100%;
-                    color: rgb(182, 182, 182, 0.2);
+                    color: rgba(208, 255, 0, 0.3);
                     background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
                     -webkit-background-clip: text;
                     background-clip: text;
