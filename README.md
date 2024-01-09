@@ -1,21 +1,9 @@
-# 👓LEE MYEONGHUN PORTFOLIO(vite.ver)
-
-111
-
+# 👓LEE MYEONGHUN PORTFOLIO(vite.ver1)
+이 포트폴리오는 제작이 중단되었습니다. 완성도 70%
 ## 제작기간
-
-2023-11-15 디자인 작업 시작
-2023-11-28 퍼블리싱(mainpage)
-2023-11 29 intro
-2023-11-30 horizon(40%)
-
+23.11.30 ~
 ## 완성작 보기
-
 미리보기 :
-
-<div align=center>
- 
-</div>
 
 ## 사용 스택
 
@@ -37,7 +25,5 @@ npm i gsap
 
 <details>
 <summary></summary>
-
-- ####
 
 </details>
